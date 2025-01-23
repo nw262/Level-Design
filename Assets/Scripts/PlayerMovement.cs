@@ -10,15 +10,23 @@ public class PlayerMovement : MonoBehaviour
     public Transform orientation;
     public GameObject player;
 
-    float xInput;
-    float yInput;
-    Vector3 moveDirection;
-    bool crouch;
+    private float xInput;
+    private float yInput;
+    private Vector3 moveDirection;
+    private bool crouch;
+    private float origScaleY;
+    private float origPosY;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // hold original scale of the player when the game first starts
+        origScaleY = player.transform.localScale.y;
+        // hold the correct y pos for the player by getting half of its y scale
+        origPosY = origScaleY / 2;
 
+        // these are used to ensure that crouching doesn't bump the character up or down
+        // and returns them to the same height
     }
 
     // Update is called once per frame
@@ -43,14 +51,20 @@ public class PlayerMovement : MonoBehaviour
         // crouch toggle
         if (Input.GetKeyDown("c"))
         {
-            player.transform.localScale += new Vector3(0, -0.5f, 0);
-            player.transform.position += new Vector3(0, -0.54f, 0);
+            // scale y by half
+            player.transform.localScale += new Vector3(0, -(origScaleY / 2), 0);
+            // lower pos to be at ground level
+            player.transform.position += new Vector3(0, -origPosY, 0);
+            // lower speed
             speed = speed / 2;
         }
         if (Input.GetKeyUp("c"))
         {
-            player.transform.localScale += new Vector3(0, 0.5f, 0);
-            player.transform.position += new Vector3(0, 0.54f, 0);
+            // scale y back to original
+            player.transform.localScale += new Vector3(0, (origScaleY / 2), 0);
+            // raise y pos to be at ground level
+            player.transform.position += new Vector3(0, origPosY / 2, 0);
+            // put speed back
             speed = speed * 2;
         }
     }

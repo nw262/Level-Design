@@ -58,6 +58,7 @@ public class Window : Interactable
     {
         prompt.text = "Press 'F' to peak.";
         prompt.enabled = false;
+        prompt.color = Color.red;
         defaultFOV = playerCamera.fieldOfView;
     }
 

@@ -15,8 +15,11 @@ public class PlayerInteraction : MonoBehaviour
         HandleRaycast();
 
         // if player presses 'F' interact with the object
-        if (Input.GetKeyDown(KeyCode.F) && currTarget) {
-            currTarget.OnInteract();
+        if (currTarget) {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                currTarget.OnInteract();
+            }
         }
     }
 

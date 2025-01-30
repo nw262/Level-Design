@@ -55,7 +55,6 @@ public class PlayerInteraction : MonoBehaviour
             // case 2: look away from current target but not to a new target
             else if (currTarget) {
                 // set current target to null and run the look away script
-                Debug.Log("looked away");
                 currTarget.OnLookAway();
                 currTarget = null;
             }

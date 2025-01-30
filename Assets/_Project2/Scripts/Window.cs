@@ -18,7 +18,6 @@ public class Window : Interactable
     public override void OnLook()
     {
         prompt.enabled = true;
-        Debug.Log("this is a window!");
     }
 
     // Called when the player interacts with the object

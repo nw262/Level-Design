@@ -1,13 +1,16 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI; 
+using UnityEngineInternal;
 
 public class Fireplace : Interactable
 {
     public Text prompt; // UI element that shows up when player is capable of interacting
+    private float nothing;
 
     private bool fireOn;
     private ParticleSystem fireParticles;
     private Light fireLight;
+    private AudioSource sound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,9 +25,11 @@ public class Fireplace : Interactable
         // make sure fire is turned off
         fireParticles = gameObject.GetComponentInChildren<ParticleSystem>();
         fireLight = gameObject.GetComponentInChildren<Light>();
+        sound = gameObject.GetComponentInChildren<AudioSource>();
 
         fireParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         fireLight.enabled = false;
+        sound.enabled = false;
 
     }
 
@@ -36,6 +41,8 @@ public class Fireplace : Interactable
             fireLight.enabled = true;
             prompt.enabled = false;
             fireOn = true;
+            sound.enabled = true;
+
         }
     }
 

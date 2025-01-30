@@ -5,7 +5,6 @@ using UnityEngineInternal;
 public class Fireplace : Interactable
 {
     public Text prompt; // UI element that shows up when player is capable of interacting
-    private float nothing;
 
     private bool fireOn;
     private ParticleSystem fireParticles;

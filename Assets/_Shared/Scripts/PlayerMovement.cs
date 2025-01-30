@@ -29,25 +29,9 @@ public class PlayerMovement : MonoBehaviour
         // and returns them to the same height
     }
 
-    // Update is called once per frame
+    // Update is called each frame
     void Update()
     {
-        // Get movement input
-        xInput = Input.GetAxis("Horizontal");
-        yInput = Input.GetAxis("Vertical");
-
-        // make sure speed doesn't keep going up with acceleration
-        SpeedControl();
-
-        // find direction the player is facing based on the sphere object attached
-        moveDirection = orientation.forward * yInput + orientation.right * xInput;
-
-        // add force to move player in correct direction
-        rb.AddForce(moveDirection * speed, ForceMode.Force);
-
-        // add drag to keep the player from sliding when they stop
-        rb.linearDamping = drag;
-
         // crouch toggle
         if (Input.GetKeyDown("c"))
         {
@@ -67,6 +51,26 @@ public class PlayerMovement : MonoBehaviour
             // put speed back
             speed = speed * 2;
         }
+    }
+
+    // FixedUpdate is called by each unit of time(?)
+    void FixedUpdate()
+    {
+        // Get movement input
+        xInput = Input.GetAxis("Horizontal");
+        yInput = Input.GetAxis("Vertical");
+
+        // make sure speed doesn't keep going up with acceleration
+        SpeedControl();
+
+        // find direction the player is facing based on the sphere object attached
+        moveDirection = orientation.forward * yInput + orientation.right * xInput;
+
+        // add force to move player in correct direction
+        rb.AddForce(moveDirection * speed, ForceMode.Force);
+
+        // add drag to keep the player from sliding when they stop
+        rb.linearDamping = drag;
     }
 
     private void SpeedControl()

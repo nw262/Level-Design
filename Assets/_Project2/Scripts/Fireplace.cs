@@ -9,7 +9,8 @@ public class Fireplace : Interactable
     private bool fireOn;
     private ParticleSystem fireParticles;
     private Light fireLight;
-    private AudioSource sound;
+    public AudioSource fireSFX;
+    public AudioSource lighterSFX;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,11 +25,10 @@ public class Fireplace : Interactable
         // make sure fire is turned off
         fireParticles = gameObject.GetComponentInChildren<ParticleSystem>();
         fireLight = gameObject.GetComponentInChildren<Light>();
-        sound = gameObject.GetComponentInChildren<AudioSource>();
 
         fireParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         fireLight.enabled = false;
-        sound.enabled = false;
+        fireSFX.enabled = false;
 
     }
 
@@ -36,13 +36,18 @@ public class Fireplace : Interactable
     {
         // activate!!
         if (!fireOn) {
-            fireParticles.Play();
-            fireLight.enabled = true;
-            prompt.enabled = false;
-            fireOn = true;
-            sound.enabled = true;
-
+            Invoke("startFire", 3);
+            lighterSFX.enabled = true;
         }
+    }
+
+    private void startFire()
+    {
+        fireParticles.Play();
+        fireLight.enabled = true;
+        prompt.enabled = false;
+        fireOn = true;
+        fireSFX.enabled = true;
     }
 
     public override void OnLook()

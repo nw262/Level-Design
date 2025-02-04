@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 8f;
+    public float jumpForce;
     public float drag;
     public Rigidbody rb;
     public Transform orientation;
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private bool crouch;
     private float origScaleY;
     private float origPosY;
+    private bool isGrounded;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,8 +31,30 @@ public class PlayerMovement : MonoBehaviour
         // and returns them to the same height
     }
 
-    // Update is called each frame
     void Update()
+    {
+        Jump();
+        Crouch();
+    }
+
+    // FixedUpdate is called by each unit of time(?)
+    void FixedUpdate()
+    {
+        // Get movement input
+        xInput = Input.GetAxis("Horizontal");
+        yInput = Input.GetAxis("Vertical");
+
+        // find direction the player is facing based on the sphere object attached
+        moveDirection = orientation.forward * yInput + orientation.right * xInput;
+
+        // add force to move player in correct direction
+        rb.AddForce(moveDirection * speed, ForceMode.Force);
+
+        // add drag to keep the player from sliding when they stop
+        rb.linearDamping = drag;
+    }
+
+    private void Crouch()
     {
         // crouch toggle
         if (Input.GetKeyDown("c"))
@@ -53,26 +77,24 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // FixedUpdate is called by each unit of time(?)
-    void FixedUpdate()
+    private void Jump()
     {
-        // Get movement input
-        xInput = Input.GetAxis("Horizontal");
-        yInput = Input.GetAxis("Vertical");
-
-        // make sure speed doesn't keep going up with acceleration
-        SpeedControl();
-
-        // find direction the player is facing based on the sphere object attached
-        moveDirection = orientation.forward * yInput + orientation.right * xInput;
-
-        // add force to move player in correct direction
-        rb.AddForce(moveDirection * speed, ForceMode.Force);
-
-        // add drag to keep the player from sliding when they stop
-        rb.linearDamping = drag;
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
+        }
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
+    }
+
+    /*
     private void SpeedControl()
     {
         Vector3 flatVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
@@ -84,4 +106,5 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity = new Vector3(limitedVel.x, rb.linearVelocity.y, limitedVel.z);
         }
     }
+    */
 }

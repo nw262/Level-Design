@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
+  jumpForce: 0
   drag: 5
   rb: {fileID: 7141662051345774896}
   orientation: {fileID: 8568602758797061787}
@@ -340,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62160c83f27421f409a5bc49c926d431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 100
+  sensitivity: 150
   player: {fileID: 7137990538037447540}
 --- !u!1 &7388200738839249373
 GameObject:

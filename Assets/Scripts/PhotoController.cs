@@ -15,6 +15,7 @@ public class PhotoController : MonoBehaviour
     private GameObject normalControls;
     private GameObject cameraControls;
     private bool controlSwitch = true; // true for normal, false for camera
+    public bool takingPhoto = false;
 
     [Header("Camera Zoom")]
     public float zoomSpeed = 10f;
@@ -39,7 +40,7 @@ public class PhotoController : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.E) && !journalMode) {
+        if (Input.GetKeyDown(KeyCode.E) && !journalMode && !takingPhoto) {
             photoMode = !photoMode;
             cameraUI.SetActive(photoMode);
             controlSwitch = !controlSwitch;

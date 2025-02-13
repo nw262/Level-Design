@@ -622,6 +622,7 @@ MonoBehaviour:
   journalUI: {fileID: 729373749}
   controller: {fileID: 1786813943}
   controlUI: {fileID: 1287144093}
+  takingPhoto: 0
   zoomSpeed: 10
   minZoom: 5
   maxZoom: 60
@@ -921,6 +922,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1997672387489486921, guid: 0d9fb9b326fe4a14798b4d0ed90111dc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2892342441248540373, guid: 0d9fb9b326fe4a14798b4d0ed90111dc, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1001,13 +1006,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5382598059989713097, guid: 0d9fb9b326fe4a14798b4d0ed90111dc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8245690958964188046, guid: 0d9fb9b326fe4a14798b4d0ed90111dc, type: 3}
       propertyPath: m_Name
       value: Canvas - Journal
       objectReference: {fileID: 0}
     - target: {fileID: 8245690958964188046, guid: 0d9fb9b326fe4a14798b4d0ed90111dc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

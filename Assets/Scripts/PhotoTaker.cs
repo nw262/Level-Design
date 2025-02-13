@@ -14,7 +14,6 @@ public class PhotoTaker : MonoBehaviour
     [SerializeField] private PhotoController controller;
     [SerializeField] private AudioClip cameraSFX;
 
-    private Texture2D screenCapture;
     private bool viewingPhoto;
 
     [Header("Flash Effect")]
@@ -33,7 +32,6 @@ public class PhotoTaker : MonoBehaviour
 
     private void Start()
     {
-        screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
         photos = pages[0].GetComponentsInChildren<Image>(true);
         masks = photos.Where(c => c.gameObject.tag == "OldImage").ToArray();
         photos = photos.Where(c => c.gameObject.tag == "NewImage").ToArray();
@@ -71,14 +69,16 @@ public class PhotoTaker : MonoBehaviour
         AudioSource.PlayClipAtPoint(cameraSFX, Camera.main.transform.position);
         yield return new WaitForEndOfFrame();
 
-        Rect regionToRead = new Rect(0, 0, Screen.width, Screen.height);
+        // Create a new Texture2D each time to avoid overwriting previous images
+        Texture2D newCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
 
-        screenCapture.ReadPixels(regionToRead, 0, 0, false);  
-        screenCapture.Apply();
-        ShowPhoto();
+        Rect regionToRead = new Rect(0, 0, Screen.width, Screen.height);
+        newCapture.ReadPixels(regionToRead, 0, 0, false);
+        newCapture.Apply();
+        ShowPhoto(newCapture);
     }
 
-    void ShowPhoto()
+    void ShowPhoto(Texture2D screenCapture)
     {
         Sprite photoSprite = Sprite.Create(screenCapture, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
         photoArea.sprite = photoSprite;

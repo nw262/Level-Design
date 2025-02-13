@@ -12254,13 +12254,17 @@ PrefabInstance:
       propertyPath: speed
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 6355235875540764630, guid: 14bbc88d9f4608043aa91f6f656c237d, type: 3}
+      propertyPath: walkingOnGravel
+      value: 
+      objectReference: {fileID: 8300000, guid: 7db81f0f0c9fc425cbba3168d7c9e711, type: 3}
     - target: {fileID: 7137990538037447540, guid: 14bbc88d9f4608043aa91f6f656c237d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 136.53
       objectReference: {fileID: 0}
     - target: {fileID: 7137990538037447540, guid: 14bbc88d9f4608043aa91f6f656c237d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.08
+      value: 9.77
       objectReference: {fileID: 0}
     - target: {fileID: 7137990538037447540, guid: 14bbc88d9f4608043aa91f6f656c237d, type: 3}
       propertyPath: m_LocalPosition.z

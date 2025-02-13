@@ -65,6 +65,7 @@ public class PhotoTaker : MonoBehaviour
         foreach (GameObject element in uiElements) element.SetActive(false);
     
         viewingPhoto = true;
+        controller.takingPhoto = true;
 
         yield return new WaitForEndOfFrame();
 
@@ -116,6 +117,8 @@ public class PhotoTaker : MonoBehaviour
 
         // all UI elements to true
         foreach (GameObject element in uiElements) element.SetActive(true);
+
+        controller.takingPhoto = false;
 
     }
 }

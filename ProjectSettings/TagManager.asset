@@ -9,6 +9,8 @@ TagManager:
   - OldImage
   - ImmuneImage
   - NewImage
+  - NormalControls
+  - CameraControls
   layers:
   - Default
   - TransparentFX

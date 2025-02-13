@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 // main script for taking photos
 // left click to take a photo which takes a screenshot of the screen and displays it as a textured 2D image
@@ -12,6 +13,9 @@ public class PhotoTaker : MonoBehaviour
     [SerializeField] private List<GameObject> uiElements;
     [SerializeField] private PhotoController controller;
 
+    private Texture2D screenCapture;
+    private bool viewingPhoto;
+
     [Header("Flash Effect")]
     [SerializeField] private GameObject cameraFlash;
     [SerializeField] private float flashTime;
@@ -19,13 +23,20 @@ public class PhotoTaker : MonoBehaviour
     [Header("Fade-in Effect")]
     [SerializeField] private Animator fadingAnimation;
 
-
-    private Texture2D screenCapture;
-    private bool viewingPhoto;
+    [Header("Photo Saving")]
+    public GameObject[] pages; // store all pages of the journal
+    private int currentIdx = 0;
+    private int currPage = 0;
+    private Image[] photos;
+    private Image[] masks;
 
     private void Start()
     {
         screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+        photos = pages[0].GetComponentsInChildren<Image>(true);
+        masks = photos.Where(c => c.gameObject.tag == "OldImage").ToArray();
+        photos = photos.Where(c => c.gameObject.tag == "NewImage").ToArray();
+
     }
 
     private void Update()
@@ -70,6 +81,21 @@ public class PhotoTaker : MonoBehaviour
         photoArea.sprite = photoSprite;
 
         photoFrame.SetActive(true);
+
+        // if no more room on current page, reset everything and go to next page
+        if (currentIdx > photos.Length - 1)
+        {
+            currPage++;
+            photos = pages[currPage].GetComponentsInChildren<Image>(true);
+            masks = photos.Where(c => c.gameObject.tag == "OldImage").ToArray();
+            photos = photos.Where(c => c.gameObject.tag != "NewImage").ToArray();
+            currentIdx = 0;
+        }
+        
+        photos[currentIdx].sprite = photoSprite;
+        masks[currentIdx].gameObject.SetActive(true);
+
+        currentIdx++;
 
         StartCoroutine(FlashEffect());
         fadingAnimation.Play("PhotoFade");

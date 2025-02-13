@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Undefined
   - Ground
+  - OldImage
+  - ImmuneImage
+  - NewImage
   layers:
   - Default
   - TransparentFX

@@ -6,14 +6,11 @@ TagManager:
   tags:
   - Undefined
   - Ground
-<<<<<<< HEAD
   - OldImage
   - ImmuneImage
   - NewImage
   - NormalControls
   - CameraControls
-=======
->>>>>>> parent of d0d0aab (move package and add photo assets)
   layers:
   - Default
   - TransparentFX

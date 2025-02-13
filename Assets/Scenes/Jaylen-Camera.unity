@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &67533598 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6833420266816756622, guid: 0d9fb9b326fe4a14798b4d0ed90111dc, type: 3}
+  m_PrefabInstance: {fileID: 7368668115109867047}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &360048739
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +334,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5121673900878301458, guid: 17ba75dab73938647aced4362876028b, type: 3}
   m_PrefabInstance: {fileID: 8727929395280561963}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
 --- !u!1 &509437538 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6406168271164159761, guid: 0d9fb9b326fe4a14798b4d0ed90111dc, type: 3}
@@ -350,13 +354,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6636735143753267921, guid: 4b5d5c133e911b4428930f8eb9ec8749, type: 3}
   m_PrefabInstance: {fileID: 2513742115367701342}
   m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> parent of d0d0aab (move package and add photo assets)
 --- !u!4 &1444628471 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6269961864789524898, guid: 14bbc88d9f4608043aa91f6f656c237d, type: 3}
   m_PrefabInstance: {fileID: 2045684035}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1444628472 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7224103346498756220, guid: 14bbc88d9f4608043aa91f6f656c237d, type: 3}
+  m_PrefabInstance: {fileID: 2045684035}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62160c83f27421f409a5bc49c926d431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1581678852
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,8 +593,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   photoMode: 0
+  journalMode: 0
   cameraUI: {fileID: 457341778}
-<<<<<<< HEAD
   journalUI: {fileID: 729373749}
   controller: {fileID: 1444628472}
   controlUI: {fileID: 1287144093}
@@ -593,8 +606,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2588470354865520077, guid: 0d9fb9b326fe4a14798b4d0ed90111dc, type: 3}
   m_PrefabInstance: {fileID: 7368668115109867047}
   m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> parent of d0d0aab (move package and add photo assets)
 --- !u!1001 &2045684035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -670,6 +681,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1638212803}
   m_SourcePrefab: {fileID: 100100000, guid: 14bbc88d9f4608043aa91f6f656c237d, type: 3}
+--- !u!1 &2090433008 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 245992692716339769, guid: 0d9fb9b326fe4a14798b4d0ed90111dc, type: 3}
+  m_PrefabInstance: {fileID: 7368668115109867047}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2146395355
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,7 +754,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1001 &2513742115367701342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -933,8 +948,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d9fb9b326fe4a14798b4d0ed90111dc, type: 3}
-=======
->>>>>>> parent of d0d0aab (move package and add photo assets)
 --- !u!1001 &8727929395280561963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -943,6 +956,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1455855756422017167, guid: 17ba75dab73938647aced4362876028b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1843124614650809876, guid: 17ba75dab73938647aced4362876028b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 621.37665
@@ -995,6 +1012,38 @@ PrefabInstance:
       propertyPath: cameraFlash
       value: 
       objectReference: {fileID: 434883171}
+    - target: {fileID: 4880787170578892830, guid: 17ba75dab73938647aced4362876028b, type: 3}
+      propertyPath: pages.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4880787170578892830, guid: 17ba75dab73938647aced4362876028b, type: 3}
+      propertyPath: 'pages.Array.data[0]'
+      value: 
+      objectReference: {fileID: 67533598}
+    - target: {fileID: 4880787170578892830, guid: 17ba75dab73938647aced4362876028b, type: 3}
+      propertyPath: 'pages.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2090433008}
+    - target: {fileID: 4880787170578892830, guid: 17ba75dab73938647aced4362876028b, type: 3}
+      propertyPath: 'pages.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1754533521}
+    - target: {fileID: 4880787170578892830, guid: 17ba75dab73938647aced4362876028b, type: 3}
+      propertyPath: 'pages.Array.data[3]'
+      value: 
+      objectReference: {fileID: 509437538}
+    - target: {fileID: 4880787170578892830, guid: 17ba75dab73938647aced4362876028b, type: 3}
+      propertyPath: 'pages.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1115111943}
+    - target: {fileID: 5121673900878301458, guid: 17ba75dab73938647aced4362876028b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191505991292135444, guid: 17ba75dab73938647aced4362876028b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1010,8 +1059,5 @@ SceneRoots:
   - {fileID: 2045684035}
   - {fileID: 2146395358}
   - {fileID: 8727929395280561963}
-<<<<<<< HEAD
   - {fileID: 2513742115367701342}
   - {fileID: 7368668115109867047}
-=======
->>>>>>> parent of d0d0aab (move package and add photo assets)

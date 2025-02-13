@@ -1,20 +1,11 @@
 using UnityEditor.Rendering;
 using UnityEngine;
-using UnityEngine.ProBuilder;
 
 public class PhotoController : MonoBehaviour
 {   
 
     public bool photoMode = false;
-    public bool journalMode = false;
-    [SerializeField] private GameObject cameraUI;
-    [SerializeField] private GameObject journalUI;
-
-    [SerializeField] private CameraController controller;
-    [SerializeField] private GameObject controlUI;
-    private GameObject normalControls;
-    private GameObject cameraControls;
-    private bool controlSwitch = true; // true for normal, false for camera
+    [SerializeField] GameObject cameraUI;
 
     [Header("Camera Zoom")]
     public float zoomSpeed = 10f;
@@ -27,11 +18,6 @@ public class PhotoController : MonoBehaviour
     {   
         // get the player's camera
         cam = gameObject.GetComponentInChildren<Camera>();
-        normalControls = GameObject.FindGameObjectWithTag("NormalControls");
-        normalControls.SetActive(true);
-        cameraControls = GameObject.FindGameObjectWithTag("CameraControls");
-        cameraControls.SetActive(false);
-
     }
 
 
@@ -39,33 +25,12 @@ public class PhotoController : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.E) && !journalMode) {
+        if (Input.GetKeyDown(KeyCode.E)) {
             photoMode = !photoMode;
             cameraUI.SetActive(photoMode);
-            controlSwitch = !controlSwitch;
-            normalControls.SetActive(controlSwitch);
-            cameraControls.SetActive(!controlSwitch);
-        }
-
-        if (Input.GetKeyDown(KeyCode.B) && !photoMode) {
-            journalMode = !journalMode;
-            journalUI.SetActive(journalMode);
-            controlSwitch = !controlSwitch;
-            normalControls.SetActive(controlSwitch);
         }
 
         float scrollInput = Input.GetAxis("Mouse ScrollWheel");
-
-        if (journalMode)
-        {
-            controller.enabled = false; // turn off fps camera controller
-            Cursor.lockState = CursorLockMode.None;
-        }
-        else
-        {
-            controller.enabled = true;
-            Cursor.lockState = CursorLockMode.Locked;
-        }  
 
         // zooming in and out 
         if (photoMode) {

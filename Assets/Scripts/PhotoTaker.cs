@@ -88,7 +88,7 @@ public class PhotoTaker : MonoBehaviour
             currPage++;
             photos = pages[currPage].GetComponentsInChildren<Image>(true);
             masks = photos.Where(c => c.gameObject.tag == "OldImage").ToArray();
-            photos = photos.Where(c => c.gameObject.tag != "NewImage").ToArray();
+            photos = photos.Where(c => c.gameObject.tag == "NewImage").ToArray();
             currentIdx = 0;
         }
         

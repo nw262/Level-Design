@@ -13,12 +13,12 @@ public class JournalPageTurner : MonoBehaviour
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
-    {
+    {   
         UpdatePages();
     }
 
     public void NextPage()
-    {
+    {   
         if (currentPageIndex < pages.Length - 1)
         {
             currentPageIndex++;
@@ -45,7 +45,7 @@ public class JournalPageTurner : MonoBehaviour
 
         // Enable/disable buttons based on available pages
         coverButton.interactable = currentPageIndex == 0;
-        previousPageButton.interactable = currentPageIndex > 1;
+        previousPageButton.interactable = currentPageIndex > 0;
         nextPageButton.interactable = currentPageIndex < pages.Length - 1 && currentPageIndex != 0;
     }
 }

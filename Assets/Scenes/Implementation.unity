@@ -9000,6 +9000,7 @@ MonoBehaviour:
   journalUI: {fileID: 1862925353}
   controller: {fileID: 777667697}
   controlUI: {fileID: 36020542}
+  takingPhoto: 0
   zoomSpeed: 10
   minZoom: 5
   maxZoom: 60
@@ -15285,6 +15286,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PhotoTakingSystem (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4880787170578892830, guid: 17ba75dab73938647aced4362876028b, type: 3}
+      propertyPath: cameraSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: bc26a09483a5e460eb1f70fb49fcb7c0, type: 3}
     - target: {fileID: 4880787170578892830, guid: 17ba75dab73938647aced4362876028b, type: 3}
       propertyPath: controller
       value: 

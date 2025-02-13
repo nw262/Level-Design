@@ -12,6 +12,7 @@ public class PhotoTaker : MonoBehaviour
     [SerializeField] private GameObject photoFrame;
     [SerializeField] private List<GameObject> uiElements;
     [SerializeField] private PhotoController controller;
+    [SerializeField] private AudioClip cameraSFX;
 
     private Texture2D screenCapture;
     private bool viewingPhoto;
@@ -67,6 +68,7 @@ public class PhotoTaker : MonoBehaviour
         viewingPhoto = true;
         controller.takingPhoto = true;
 
+        AudioSource.PlayClipAtPoint(cameraSFX, Camera.main.transform.position);
         yield return new WaitForEndOfFrame();
 
         Rect regionToRead = new Rect(0, 0, Screen.width, Screen.height);

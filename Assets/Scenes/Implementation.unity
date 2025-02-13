@@ -3384,6 +3384,47 @@ MonoBehaviour:
   zoomSpeed: 10
   minZoom: 5
   maxZoom: 60
+--- !u!114 &299160493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299160489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd4bbe3d8a38c0a4d899fe660d3a9700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  jumpHeight: 0.5
+  gravity: 9.81
+  controller: {fileID: 299160494}
+--- !u!143 &299160494
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299160489}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.7
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &313965334
 GameObject:
   m_ObjectHideFlags: 0
@@ -12857,6 +12898,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6355235875540764630, guid: 14bbc88d9f4608043aa91f6f656c237d, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355235875540764630, guid: 14bbc88d9f4608043aa91f6f656c237d, type: 3}
       propertyPath: drag
       value: 1
       objectReference: {fileID: 0}
@@ -12912,7 +12957,9 @@ PrefabInstance:
       propertyPath: sensitivity
       value: 50
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7141662051345774896, guid: 14bbc88d9f4608043aa91f6f656c237d, type: 3}
+    - {fileID: 6355235875540764630, guid: 14bbc88d9f4608043aa91f6f656c237d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6269961864789524898, guid: 14bbc88d9f4608043aa91f6f656c237d, type: 3}
@@ -12922,6 +12969,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1703021352275367740, guid: 14bbc88d9f4608043aa91f6f656c237d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 299160491}
+    - targetCorrespondingSourceObject: {fileID: 1703021352275367740, guid: 14bbc88d9f4608043aa91f6f656c237d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 299160494}
+    - targetCorrespondingSourceObject: {fileID: 1703021352275367740, guid: 14bbc88d9f4608043aa91f6f656c237d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 299160493}
   m_SourcePrefab: {fileID: 100100000, guid: 14bbc88d9f4608043aa91f6f656c237d, type: 3}
 --- !u!1 &1878395658
 GameObject:

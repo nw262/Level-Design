@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7137990538037447540}
-  - component: {fileID: 6355235875540764630}
-  - component: {fileID: 7141662051345774896}
+  - component: {fileID: 8938443770362127764}
+  - component: {fileID: 8562883566622506577}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -28,15 +28,15 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.63, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8568602758797061787}
   - {fileID: 6269961864789524898}
   - {fileID: 2887611456113596177}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6355235875540764630
+--- !u!114 &8938443770362127764
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,16 +45,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1703021352275367740}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 425c9d69b6a595c46a1e56391a831d86, type: 3}
+  m_Script: {fileID: 11500000, guid: b838e445ec591fa4abee0378ca6b788d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  jumpForce: 0
-  drag: 5
-  rb: {fileID: 7141662051345774896}
+  speed: 10
+  jumpForce: 2
   orientation: {fileID: 8568602758797061787}
-  player: {fileID: 1703021352275367740}
---- !u!54 &7141662051345774896
+  rigidbody: {fileID: 8562883566622506577}
+  isGrounded: 0
+--- !u!54 &8562883566622506577
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

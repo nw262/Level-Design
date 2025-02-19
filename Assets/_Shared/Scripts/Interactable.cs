@@ -10,4 +10,6 @@ public abstract class Interactable : MonoBehaviour
 
     // Called when the player stops looking at the object
     public abstract void OnLookAway();
+
+    public abstract void OnStop();
 }

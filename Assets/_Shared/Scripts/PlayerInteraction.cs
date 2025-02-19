@@ -6,19 +6,35 @@ public class PlayerInteraction : MonoBehaviour
 {      
 
     public float range = 1f; // the distance the player has to be in order to interact with something
+    //private bool interacting;
 
     private Interactable currTarget; // the Interactable target object the player is currently looking at
+    private Interactable interactingWith;
 
     // Update is called once per frame
     void Update()
     {   
         HandleRaycast();
 
-        // if player presses 'F' interact with the object
-        if (currTarget) {
+        if (interactingWith)
+        {
             if (Input.GetKeyDown(KeyCode.F))
             {
+                interactingWith.OnStop();
+                //interacting = false;
+                interactingWith = null;
+            }
+        }
+
+        // if player presses 'F' interact with the object
+        if (currTarget) {
+            //Debug.Log("currTarget: " + currTarget);
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                //Debug.Log("interacted");
                 currTarget.OnInteract();
+                //interacting = true;
+                interactingWith = currTarget;
             }
         }
     }

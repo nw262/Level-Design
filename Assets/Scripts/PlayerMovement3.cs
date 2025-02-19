@@ -9,6 +9,8 @@ public class PlayerMovement3 : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip bounceSFX;
 
+    public static bool OnRope { get; set; }
+
     private float xInput;
     private float yInput;
     private Vector3 moveDirection;
@@ -17,17 +19,23 @@ public class PlayerMovement3 : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void FixedUpdate()
     {
+        if (OnRope)
+        {
+            //Debug.Log("OnRope");
+            return;
+        }
+
         xInput = Input.GetAxis("Horizontal");
         yInput = Input.GetAxis("Vertical");
 
@@ -58,6 +66,9 @@ public class PlayerMovement3 : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+        }
+        else if (collision.gameObject.CompareTag("Trampoline"))
+        {
             PlayAudioClip(bounceSFX);
         }
     }
@@ -67,6 +78,22 @@ public class PlayerMovement3 : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
+        }
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.CompareTag("FoamPit"))
+        {
+            speed = speed / 2;
+        }
+    }
+
+    void OnTriggerExit(Collider collider)
+    {
+        if (collider.CompareTag("FoamPit"))
+        {
+            speed = speed * 2;
         }
     }
 

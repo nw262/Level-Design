@@ -11,6 +11,8 @@ TagManager:
   - NewImage
   - NormalControls
   - CameraControls
+  - Trampoline
+  - FoamPit
   layers:
   - Default
   - TransparentFX

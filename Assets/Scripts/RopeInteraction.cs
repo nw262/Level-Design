@@ -24,13 +24,13 @@ public class RopeInteraction : Interactable
     // Called when the player interacts with the object
     public override void OnInteract()
     {
-        Debug.Log("interacted");
+        //Debug.Log("interacted");
         //Debug.Log("ropeSwing: " + ropeSwing);
         if (ropeSwing)
         {
             playerBody.GetComponent<CapsuleCollider>().enabled = false;
             PlayerMovement3.OnRope = true;
-            Debug.Log(PlayerMovement3.OnRope);
+            //Debug.Log(PlayerMovement3.OnRope);
             ropeSwing.enabled = true;
         }
         else
@@ -51,10 +51,9 @@ public class RopeInteraction : Interactable
         {
             playerBody.GetComponent<CapsuleCollider>().enabled = true;
             PlayerMovement3.OnRope = false;
-            Debug.Log(PlayerMovement3.OnRope);
+            //Debug.Log(PlayerMovement3.OnRope);
             ropeSwing.enabled = false;
-            player.GetComponent<Rigidbody>().linearVelocity = new Vector3(0f, 0f, ropeBottom.GetComponent<Rigidbody>().linearVelocity.y);
-                //-= new Vector3(0f, player.GetComponent<Rigidbody>().linearVelocity.y, 0f);
+            //player.GetComponent<Rigidbody>().linearVelocity = new Vector3(0f, 0f, ropeBottom.GetComponent<Rigidbody>().linearVelocity.y);
         }
         else
         {

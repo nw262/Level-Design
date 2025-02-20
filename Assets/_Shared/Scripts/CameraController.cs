@@ -15,10 +15,6 @@ public class CameraController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (PlayerMovement3.OnRope)
-        {
-            return;
-        }
         float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 

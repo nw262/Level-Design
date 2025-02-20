@@ -97,6 +97,20 @@ public class PlayerMovement3 : MonoBehaviour
         }
     }
 
+    // handling stairs
+    void OnCollisionStay(Collision collision)
+    {
+        foreach (ContactPoint contact in collision.contacts)
+        {
+            float angle = Vector3.Angle(contact.normal, Vector3.up);
+            if (angle > 45 && angle < 70) // Only for typical stair angles
+            {
+                rigidbody.AddForce(Vector3.up * 5, ForceMode.Force);
+                break;
+            }
+        }
+    }
+
     void PlayAudioClip(AudioClip clip)
     {
         audioSource.clip = clip;

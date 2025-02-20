@@ -13,6 +13,7 @@ TagManager:
   - CameraControls
   - Trampoline
   - FoamPit
+  - Stairs
   layers:
   - Default
   - TransparentFX

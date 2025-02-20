@@ -9,7 +9,7 @@ public class RopeSwing : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -29,6 +29,6 @@ public class RopeSwing : MonoBehaviour
 
         player.position = new Vector3(ropeBottom.transform.position.x, ropeBottom.transform.position.y, ropeBottom.transform.position.z);
         //Debug.Log(player.GetComponent<Rigidbody>().linearVelocity);
-        Debug.Log(ropeBottomRB.linearVelocity);
+        //Debug.Log(ropeBottomRB.linearVelocity);
     }
 }

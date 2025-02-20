@@ -32,7 +32,7 @@ public class PlayerMovement3 : MonoBehaviour
     {
         if (OnRope)
         {
-            //Debug.Log("OnRope");
+            rigidbody.linearVelocity = new Vector3(0f, 0f, 0f);
             return;
         }
 
@@ -63,7 +63,7 @@ public class PlayerMovement3 : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Stairs"))
         {
             isGrounded = true;
         }
@@ -75,12 +75,12 @@ public class PlayerMovement3 : MonoBehaviour
 
     void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Stairs"))
         {
             isGrounded = false;
         }
     }
-
+    
     void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("FoamPit"))
@@ -96,17 +96,20 @@ public class PlayerMovement3 : MonoBehaviour
             speed = speed * 2;
         }
     }
-
+    
     // handling stairs
     void OnCollisionStay(Collision collision)
     {
-        foreach (ContactPoint contact in collision.contacts)
+        if (collision.gameObject.CompareTag("Stairs"))
         {
-            float angle = Vector3.Angle(contact.normal, Vector3.up);
-            if (angle > 45 && angle < 70) // Only for typical stair angles
+            foreach (ContactPoint contact in collision.contacts)
             {
-                rigidbody.AddForce(Vector3.up * 5, ForceMode.Force);
-                break;
+                float angle = Vector3.Angle(contact.normal, Vector3.up);
+                if (angle > 45 && angle < 70) // Only for typical stair angles
+                {
+                    rigidbody.AddForce(Vector3.up * 5, ForceMode.Force);
+                    break;
+                }
             }
         }
     }

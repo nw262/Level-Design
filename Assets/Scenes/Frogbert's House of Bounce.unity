@@ -1989,7 +1989,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1341383202}
+  m_Mesh: {fileID: 602865274}
 --- !u!33 &338150207
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -12494,7 +12494,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1551824743}
+  m_Mesh: {fileID: 1341383202}
 --- !u!33 &888067062
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -16384,7 +16384,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 267033782}
+  m_Mesh: {fileID: 2123401760}
 --- !u!33 &1052846079
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -22395,7 +22395,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 2123401760}
+  m_Mesh: {fileID: 1125298046}
 --- !u!33 &1303348919
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -29055,6 +29055,75 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1001 &1845270118
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7460351508259982315, guid: 682ebc89f482947f1acbc8c02f723298, type: 3}
+      propertyPath: m_Name
+      value: frog-mascot-01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837299671798288721, guid: 682ebc89f482947f1acbc8c02f723298, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837299671798288721, guid: 682ebc89f482947f1acbc8c02f723298, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100.000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837299671798288721, guid: 682ebc89f482947f1acbc8c02f723298, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837299671798288721, guid: 682ebc89f482947f1acbc8c02f723298, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -79.099
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837299671798288721, guid: 682ebc89f482947f1acbc8c02f723298, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.593
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837299671798288721, guid: 682ebc89f482947f1acbc8c02f723298, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 23.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837299671798288721, guid: 682ebc89f482947f1acbc8c02f723298, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837299671798288721, guid: 682ebc89f482947f1acbc8c02f723298, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837299671798288721, guid: 682ebc89f482947f1acbc8c02f723298, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837299671798288721, guid: 682ebc89f482947f1acbc8c02f723298, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837299671798288721, guid: 682ebc89f482947f1acbc8c02f723298, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837299671798288721, guid: 682ebc89f482947f1acbc8c02f723298, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837299671798288721, guid: 682ebc89f482947f1acbc8c02f723298, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 682ebc89f482947f1acbc8c02f723298, type: 3}
 --- !u!1 &1849233550
 GameObject:
   m_ObjectHideFlags: 0
@@ -30685,7 +30754,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 602865274}
+  m_Mesh: {fileID: 267033782}
 --- !u!33 &1976682212
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -41264,3 +41333,4 @@ SceneRoots:
   - {fileID: 4377243062122599519}
   - {fileID: 1247023805}
   - {fileID: 365914632}
+  - {fileID: 1845270118}

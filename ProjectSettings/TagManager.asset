@@ -14,6 +14,7 @@ TagManager:
   - Trampoline
   - FoamPit
   - Stairs
+  - Head
   layers:
   - Default
   - TransparentFX

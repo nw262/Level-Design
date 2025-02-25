@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class LookTriggerBehavior : MonoBehaviour
 {
+    public AudioSource conversationAudio;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,10 +25,12 @@ public class LookTriggerBehavior : MonoBehaviour
             if (HeadTurn.ShouldLook)
             {
                 HeadTurn.ShouldLook = false;
+                conversationAudio.Play();
             }
             else
             {
                 HeadTurn.ShouldLook = true;
+                conversationAudio.Stop();
             }
         }
     }

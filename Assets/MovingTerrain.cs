@@ -2,19 +2,19 @@ using UnityEngine;
 
 public class MovingTerrain : MonoBehaviour
 {
-    public float speed = 50f; // Adjust speed to match train movement
-    public float resetPosition = -100f; // Position at which the terrain resets
-    public float startPosition = 100f;  // Starting position of the terrain
+    public float speed = 50f; // Movement speed
+    public float terrainLength = 50f; // Length of the terrain piece
 
     void Update()
     {
-        // Move the terrain backward
+        // Move terrain backward
         transform.position += Vector3.back * speed * Time.deltaTime;
 
-        // Reset terrain position when it moves past the reset point
-        if (transform.position.z <= resetPosition)
+        // Check if the terrain has moved past its reset point
+        if (transform.position.z <= -terrainLength)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, startPosition);
+            // Move it to the back of the last terrain piece
+            transform.position += Vector3.forward * terrainLength * 2f;
         }
     }
 }

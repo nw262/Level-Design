@@ -10,6 +10,7 @@ public class SlidingDoor : Interactable
     public float slideSpeed = 5f;
     public AudioClip slideSFX;
     public float timeBeforeClose = 3f;
+    public bool cutscene = false;
 
 
     private Vector3 startPosition;
@@ -45,6 +46,9 @@ public class SlidingDoor : Interactable
         prompt.enabled = false;
         prompt.color = Color.red;
         startPosition = transform.position;
+
+        if (cutscene)
+            OpenDoor();
     }
 
     // Update is called once per frame

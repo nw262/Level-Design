@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class MovingTerrain : MonoBehaviour
 {
-    public float speed = 5f; // Adjust speed to match train movement
-    public float resetPosition = -50f; // Position at which the terrain resets
-    public float startPosition = 50f;  // Starting position of the terrain
+    public float speed = 50f; // Adjust speed to match train movement
+    public float resetPosition = -100f; // Position at which the terrain resets
+    public float startPosition = 100f;  // Starting position of the terrain
 
     void Update()
     {

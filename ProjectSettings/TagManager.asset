@@ -15,6 +15,7 @@ TagManager:
   - FoamPit
   - Stairs
   - Head
+  - Dialogue
   layers:
   - Default
   - TransparentFX

@@ -11,7 +11,11 @@ public class HeadTurn : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        origRot = transform.rotation;
+        if (!target)
+        {
+            target = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+        origRot = transform.localRotation;
     }
 
     // Update is called once per frame
@@ -19,7 +23,14 @@ public class HeadTurn : MonoBehaviour
     {
         if (ShouldLook)
         {
-            transform.LookAt(target);
+            Vector3 lookPosition = target.position - transform.position;
+            //lookPosition.x = 0;
+            lookPosition.y= 0;
+            lookPosition.z = -Mathf.Abs(lookPosition.z);
+            Debug.Log(lookPosition);
+            transform.rotation = Quaternion.LookRotation(lookPosition, Vector3.left);
+            //transform.LookAt(target, Vector3.left);
+            //transform.localRotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z);
             lastLooking = transform.rotation;
         }
         else

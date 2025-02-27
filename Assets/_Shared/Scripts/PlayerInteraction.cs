@@ -13,7 +13,7 @@ public class PlayerInteraction : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   
+    {
         HandleRaycast();
 
         if (interactingWith)
@@ -52,7 +52,6 @@ public class PlayerInteraction : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hit, range))
         {
             Interactable hitObject = hit.collider.GetComponent<Interactable>();
-
             // case 1: look away from current target to a new target
             if (hitObject) {
 

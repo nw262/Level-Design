@@ -24,6 +24,8 @@ public class HeadTurn : MonoBehaviour
         if (ShouldLook)
         {
             Vector3 lookPosition = target.position - transform.position;
+            //lookPosition.x = 0;
+            lookPosition.y= 0;
             lookPosition.z = -Mathf.Abs(lookPosition.z);
             Debug.Log(lookPosition);
             transform.rotation = Quaternion.LookRotation(lookPosition, Vector3.left);

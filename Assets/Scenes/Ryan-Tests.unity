@@ -131,6 +131,8 @@ GameObject:
   - component: {fileID: 119423530}
   - component: {fileID: 119423529}
   - component: {fileID: 119423528}
+  - component: {fileID: 119423532}
+  - component: {fileID: 119423533}
   m_Layer: 0
   m_Name: Third Person Aim Camera
   m_TagString: Untagged
@@ -240,6 +242,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &119423532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119423527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbe43d662878a7c43bcd44d43c9e2094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 1
+  IgnoreTag: Player
+  TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  MinimumDistanceFromTarget: 0.3
+  AvoidObstacles:
+    Enabled: 1
+    DistanceLimit: 0
+    MinimumOcclusionTime: 0
+    CameraRadius: 0.4
+    UseFollowTarget:
+      Enabled: 0
+      YOffset: 0
+    Strategy: 0
+    MaximumEffort: 4
+    SmoothingTime: 0
+    Damping: 0.4
+    DampingWhenOccluded: 0.2
+  ShotQualityEvaluation:
+    Enabled: 0
+    OptimalDistance: 10
+    NearLimit: 5
+    FarLimit: 30
+    MaxQualityBoost: 0.2
+--- !u!114 &119423533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119423527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd23f4959a4be04a95d872a4bb8dfe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &145203552
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,8 +600,8 @@ Transform:
   m_GameObject: {fileID: 798165136}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.46, y: 1, z: -5.96}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalPosition: {x: -4.46, y: 2, z: -5.96}
+  m_LocalScale: {x: 1, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1165,10 +1218,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f981f4be6dcca4552825bb5be200abb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 4
   gravity: 9.81
-  rotationSpeed: 5
   controller: {fileID: 6746082766782581790}
+  followCM: {fileID: 119423529}
+  cameraFollowDistance: 5
 --- !u!4 &7074703376554740784
 Transform:
   m_ObjectHideFlags: 0

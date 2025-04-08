@@ -1,7 +1,42 @@
 using UnityEngine;
+using Unity.Cinemachine;
 
 public class ThirdPersonController : MonoBehaviour
 {
+    public float speed = 10f;
+    public float gravity = 9.81f;
+    public CharacterController controller;
+    public CinemachineThirdPersonFollow followCM;
+    public float cameraFollowDistance;
+
+    Vector3 input;
+    Vector3 moveDirection;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        followCM.ShoulderOffset = new Vector3(0.8f, 0.3f, cameraFollowDistance);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+
+        input = transform.right * moveHorizontal + transform.forward * moveVertical;
+        input.Normalize();
+
+        if (controller.isGrounded)
+        {
+            moveDirection = input;
+        }
+
+        moveDirection.y -= gravity * Time.deltaTime;
+        controller.Move(moveDirection * speed * Time.deltaTime);
+    }
+
+    /*
     public float speed = 10f;
     public float gravity = 9.81f;
     public float rotationSpeed = 5;
@@ -39,4 +74,5 @@ public class ThirdPersonController : MonoBehaviour
         moveDirection.y -= gravity * Time.deltaTime;
         controller.Move(moveDirection * speed * Time.deltaTime);
     }
+    */
 }

@@ -7,8 +7,13 @@ public class ThirdPersonController : MonoBehaviour
     public float gravity = 9.81f;
     public CharacterController controller;
     public CinemachineThirdPersonFollow followCM;
-    public float cameraFollowDistance;
     public Animator animator;
+
+    [Header("Camera Follow Settings")]
+    public float cameraFollowX;
+    public float cameraFollowY;
+    public float cameraFollowZ;
+
 
     private Vector3 input;
     private Vector3 moveDirection;
@@ -16,7 +21,7 @@ public class ThirdPersonController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        followCM.ShoulderOffset = new Vector3(0.8f, 0.3f, cameraFollowDistance);
+        followCM.ShoulderOffset = new Vector3(cameraFollowX, cameraFollowY, cameraFollowZ);
     }
 
     // Update is called once per frame

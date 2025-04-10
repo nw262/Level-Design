@@ -8,9 +8,10 @@ public class ThirdPersonController : MonoBehaviour
     public CharacterController controller;
     public CinemachineThirdPersonFollow followCM;
     public float cameraFollowDistance;
+    public Animator animator;
 
-    Vector3 input;
-    Vector3 moveDirection;
+    private Vector3 input;
+    private Vector3 moveDirection;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +27,18 @@ public class ThirdPersonController : MonoBehaviour
 
         input = transform.right * moveHorizontal + transform.forward * moveVertical;
         input.Normalize();
+
+        if (animator)
+        {
+            if (input.magnitude >= 0.01)
+            {
+                animator.SetBool("Walking", true);
+            }
+            else
+            {
+                animator.SetBool("Walking", false);
+            }
+        }
 
         if (controller.isGrounded)
         {

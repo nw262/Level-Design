@@ -1,0 +1,10 @@
+Prefabs come ready to use in unity, otherwise most meshes 
+require a material to be re-assigned and saved as a new Prefab.
+
+Alternatively, if a texture map is required, 
+assign the texture to mesh/model followed by any other required
+texture maps (eg. emissive, transmission, normal etc.) map and/or texture map to be 
+re-assigned and saved as new Prefab.
+
+Email ParisPixels@outlook.com for any additional 
+information & support. Enjoy your Assets!

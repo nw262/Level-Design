@@ -14,6 +14,9 @@ public class ThirdPersonController : MonoBehaviour
     public float cameraFollowY;
     public float cameraFollowZ;
 
+    [Header("Shopping List settings")]
+    public GameObject shoppingList;
+    private bool listIsActive = false;
 
     private Vector3 input;
     private Vector3 moveDirection;
@@ -22,11 +25,14 @@ public class ThirdPersonController : MonoBehaviour
     void Start()
     {
         followCM.ShoulderOffset = new Vector3(cameraFollowX, cameraFollowY, cameraFollowZ);
+        shoppingList.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        ToggleShoppingList();
+
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
@@ -52,6 +58,15 @@ public class ThirdPersonController : MonoBehaviour
 
         moveDirection.y -= gravity * Time.deltaTime;
         controller.Move(moveDirection * speed * Time.deltaTime);
+    }
+
+    void ToggleShoppingList()
+    {   
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            listIsActive = !listIsActive;
+            shoppingList.SetActive(listIsActive);
+        }
     }
 
     /*

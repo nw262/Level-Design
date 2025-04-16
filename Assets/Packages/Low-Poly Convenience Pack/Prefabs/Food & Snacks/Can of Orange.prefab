@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8237393583490001877}
   - component: {fileID: 6176104817674428191}
   - component: {fileID: 4788587793573118868}
-  - component: {fileID: 8116312144937986361}
   m_Layer: 0
   m_Name: Can of Orange
   m_TagString: Item
@@ -110,16 +109,3 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6080087844375034624, guid: 64ca426e7f64356498e5fef4621c8eac, type: 3}
---- !u!114 &8116312144937986361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5671460109755072202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da758398e728e04cb563458aaf85a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 5

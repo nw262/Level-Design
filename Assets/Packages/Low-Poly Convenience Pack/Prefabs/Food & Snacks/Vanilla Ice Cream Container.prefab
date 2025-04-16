@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 9154093733655476310}
   - component: {fileID: 6407822417874979996}
   - component: {fileID: 5705142808199532571}
-  - component: {fileID: -4734625766233706141}
   m_Layer: 0
   m_Name: Vanilla Ice Cream Container
   m_TagString: Untagged
@@ -110,16 +109,3 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8603964718874828544, guid: 82d5321074c039d44b9ed6ebf52b3f3d, type: 3}
---- !u!114 &-4734625766233706141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4894802539416300873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da758398e728e04cb563458aaf85a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 5

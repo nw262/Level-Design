@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4695477843024250329}
   - component: {fileID: 7407655515406037267}
   - component: {fileID: 8146117618086964628}
-  - component: {fileID: -3642808208430385288}
   m_Layer: 0
   m_Name: Small Cola Drink
   m_TagString: Item
@@ -110,16 +109,3 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1535279233325096128, guid: d05658bb4641a8b46aee61633024d24e, type: 3}
---- !u!114 &-3642808208430385288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9065107240764231878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da758398e728e04cb563458aaf85a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 5

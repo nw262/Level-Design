@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2968667789976169604}
   - component: {fileID: 1069082547909859406}
   - component: {fileID: 1808108700038989001}
-  - component: {fileID: 3023379583542151034}
   m_Layer: 0
   m_Name: Regular Potato Chips Small
   m_TagString: Item
@@ -110,16 +109,3 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8231016061702364559, guid: 3d48af9ca446bd345b7fda70c45f67b7, type: 3}
---- !u!114 &3023379583542151034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573683273753901467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da758398e728e04cb563458aaf85a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 5

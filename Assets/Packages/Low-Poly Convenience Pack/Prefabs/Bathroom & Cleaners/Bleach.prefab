@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 386902097404783167}
   - component: {fileID: 2502446828142370549}
   - component: {fileID: 3853937240893293172}
-  - component: {fileID: 471472654152474485}
   m_Layer: 0
   m_Name: Bleach
   m_TagString: Item
@@ -110,16 +109,3 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -3241742186003101016, guid: 6b34059cb263d8d4d9cd9473967aab12, type: 3}
---- !u!114 &471472654152474485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4159784890462977824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da758398e728e04cb563458aaf85a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 20

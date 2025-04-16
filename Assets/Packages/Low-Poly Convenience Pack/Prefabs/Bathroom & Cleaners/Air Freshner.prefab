@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 9219973910611552180}
   - component: {fileID: 6347570950284645246}
   - component: {fileID: 5752943371864543225}
-  - component: {fileID: 9001829613140406880}
   m_Layer: 0
   m_Name: Air Freshner
   m_TagString: Item
@@ -110,16 +109,3 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5772269745265160566, guid: b95e86f6e6af332499ba619354426d53, type: 3}
---- !u!114 &9001829613140406880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4834585981122359979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da758398e728e04cb563458aaf85a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 20

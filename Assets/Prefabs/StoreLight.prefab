@@ -44,7 +44,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0.9594634, b: 0.8443396, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -215,11 +215,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 4d932b8a7ffb91e49ac75ca63360f875, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 13.299999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d932b8a7ffb91e49ac75ca63360f875, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d932b8a7ffb91e49ac75ca63360f875, type: 3}
       propertyPath: m_LocalPosition.z
@@ -231,15 +231,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d932b8a7ffb91e49ac75ca63360f875, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d932b8a7ffb91e49ac75ca63360f875, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d932b8a7ffb91e49ac75ca63360f875, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d932b8a7ffb91e49ac75ca63360f875, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

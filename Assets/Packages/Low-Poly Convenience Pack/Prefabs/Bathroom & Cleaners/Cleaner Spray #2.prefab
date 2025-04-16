@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2157489765760258600}
   - component: {fileID: 4184977423701288674}
   - component: {fileID: 3302707989216770661}
-  - component: {fileID: 3039150955104153715}
   m_Layer: 0
   m_Name: Cleaner Spray #2
   m_TagString: Item
@@ -110,16 +109,3 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -4159668840040267310, guid: 395f6cf66654ff3419444d90f512b8cc, type: 3}
---- !u!114 &3039150955104153715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2383805784020551479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da758398e728e04cb563458aaf85a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 20

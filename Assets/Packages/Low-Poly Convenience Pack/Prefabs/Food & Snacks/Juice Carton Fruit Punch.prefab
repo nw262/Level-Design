@@ -12,9 +12,7 @@ GameObject:
   - component: {fileID: 1247734590747693145}
   - component: {fileID: 3941811540808377491}
   - component: {fileID: 2411032289804400648}
-  - component: {fileID: 4342861943945786054}
   - component: {fileID: 2215860121721753437}
-  - component: {fileID: 6231380022045355780}
   m_Layer: 0
   m_Name: Juice Carton Fruit Punch
   m_TagString: Item
@@ -112,19 +110,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1898119196029246437, guid: 2c463f0e277a94e4ca8cd44743a3e73a, type: 3}
---- !u!114 &4342861943945786054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3293499970539521350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da758398e728e04cb563458aaf85a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 5
 --- !u!54 &2215860121721753437
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -152,16 +137,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6231380022045355780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3293499970539521350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da758398e728e04cb563458aaf85a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 5

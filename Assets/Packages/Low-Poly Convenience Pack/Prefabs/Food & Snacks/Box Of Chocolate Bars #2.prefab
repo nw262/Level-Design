@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 3641185032115824558}
   - component: {fileID: 371491907621398539}
   - component: {fileID: 2504910285687774401}
-  - component: {fileID: 3819807864839913592}
+  - component: {fileID: 8226828015057914111}
   m_Layer: 0
   m_Name: Box Of Chocolate Bars #2
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3641185032115824558
 Transform:
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0.66310996}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -87,8 +87,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3819807864839913592
-MeshCollider:
+--- !u!65 &8226828015057914111
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,7 +105,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1335387241541572975, guid: 5177803f18c64b94eb77a663e792c7ac, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.4638691, y: 0.15118581, z: 0.54480326}
+  m_Center: {x: 0.0000015273695, y: 0.07559289, z: -0.0000002533198}

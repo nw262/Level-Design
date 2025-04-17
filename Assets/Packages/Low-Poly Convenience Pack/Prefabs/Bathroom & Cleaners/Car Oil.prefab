@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 5834831137567939654}
   - component: {fileID: 7446323288423207907}
   - component: {fileID: 4661877478480930601}
-  - component: {fileID: 6301597440552041384}
+  - component: {fileID: 2999074403514395417}
   m_Layer: 0
   m_Name: Car Oil
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5834831137567939654
 Transform:
@@ -87,8 +87,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6301597440552041384
-MeshCollider:
+--- !u!65 &2999074403514395417
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,7 +105,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4616897506079738161, guid: f448f7ee589e4a44984075ddacb9791a, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.1606825, y: 0.33050022, z: 0.105869815}
+  m_Center: {x: 0.00008139387, y: 0.16525011, z: -0.0000000037252903}

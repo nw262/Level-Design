@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 5214102913044047889}
   - component: {fileID: 9219973910611552180}
   - component: {fileID: 6347570950284645246}
-  - component: {fileID: 5752943371864543225}
+  - component: {fileID: 7543138711797978495}
   m_Layer: 0
   m_Name: Air Freshner
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5214102913044047889
 Transform:
@@ -87,8 +87,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5752943371864543225
-MeshCollider:
+--- !u!65 &7543138711797978495
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,7 +105,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5772269745265160566, guid: b95e86f6e6af332499ba619354426d53, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.1295448, y: 0.43165317, z: 0.11780216}
+  m_Center: {x: 0.007966792, y: 0.21582659, z: 0.00000041909516}

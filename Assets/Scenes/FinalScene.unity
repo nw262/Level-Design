@@ -4543,22 +4543,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vanilla Ice Cream Bucket
       objectReference: {fileID: 0}
-    - target: {fileID: 1639559529045557046, guid: e51f5e9afa149f64a9dd1e19ae465efe, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128850331523458444, guid: e51f5e9afa149f64a9dd1e19ae465efe, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128850331523458444, guid: e51f5e9afa149f64a9dd1e19ae465efe, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128850331523458444, guid: e51f5e9afa149f64a9dd1e19ae465efe, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.7
-      objectReference: {fileID: 0}
     - target: {fileID: 2128850331523458444, guid: e51f5e9afa149f64a9dd1e19ae465efe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.849
@@ -4598,10 +4582,6 @@ PrefabInstance:
     - target: {fileID: 2128850331523458444, guid: e51f5e9afa149f64a9dd1e19ae465efe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128850331523458444, guid: e51f5e9afa149f64a9dd1e19ae465efe, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4730,10 +4710,6 @@ PrefabInstance:
     - target: {fileID: 5671460109755072202, guid: 8323f15e47eec9946848bd352256d035, type: 3}
       propertyPath: m_Name
       value: Can of Orange (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5671460109755072202, guid: 8323f15e47eec9946848bd352256d035, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12591,10 +12567,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cleaner Spray #2 (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 2383805784020551479, guid: 04fe4c4235a12d14eb3b26bad472e7f4, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 3053205353079594381, guid: 04fe4c4235a12d14eb3b26bad472e7f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -18767,10 +18739,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bleach (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 4159784890462977824, guid: c4d7aa17ae5f11a4aa9bc7ed5370d8da, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22980,10 +22948,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Regular Potato Chips Small (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 1573683273753901467, guid: fff4f90fcbc1ae34fb1843abe98776f0, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 2205928416537174817, guid: fff4f90fcbc1ae34fb1843abe98776f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -24144,10 +24108,6 @@ PrefabInstance:
     - target: {fileID: 2042454254307703905, guid: 065b132147150b5438cce7c47a6e1fa9, type: 3}
       propertyPath: m_Name
       value: Small Sprits Drink (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2042454254307703905, guid: 065b132147150b5438cce7c47a6e1fa9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -36330,10 +36290,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small Cola Drink (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 9065107240764231878, guid: 80aae01fb0ea42c4183e12ff6bda3d0e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38433,10 +38389,6 @@ PrefabInstance:
     - target: {fileID: 8318035451676010498, guid: 7d05585095464bb47aff6428e8f9bb1d, type: 3}
       propertyPath: m_Name
       value: Ketchup Potato Chips Small (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8318035451676010498, guid: 7d05585095464bb47aff6428e8f9bb1d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8657125200987517624, guid: 7d05585095464bb47aff6428e8f9bb1d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51039,10 +50991,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Regular Potato Chips Large (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 6532705027373894571, guid: 1d49d560228605e478a0cf00e4254089, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -55503,10 +55451,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Window Fluid Blue (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 4962014728791759546, guid: 57c24b7565e16cc42819a92c33e31495, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5735139200602456064, guid: 57c24b7565e16cc42819a92c33e31495, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -56369,14 +56313,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1330896056}
     m_Modifications:
     - target: {fileID: 3641185032115824558, guid: 470b4d685604e7f4c8686f0fc860babe, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3641185032115824558, guid: 470b4d685604e7f4c8686f0fc860babe, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.66310996
-      objectReference: {fileID: 0}
-    - target: {fileID: 3641185032115824558, guid: 470b4d685604e7f4c8686f0fc860babe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0089998245
       objectReference: {fileID: 0}
@@ -56419,10 +56355,6 @@ PrefabInstance:
     - target: {fileID: 4162389086571330836, guid: 470b4d685604e7f4c8686f0fc860babe, type: 3}
       propertyPath: m_Name
       value: Box Of Chocolate Bars #2 (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4162389086571330836, guid: 470b4d685604e7f4c8686f0fc860babe, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -63228,10 +63160,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small Grape Drink (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 3881584918761386487, guid: a983b9293d5af8044a06b4ff99d80592, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 4509783588173605709, guid: a983b9293d5af8044a06b4ff99d80592, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -65428,10 +65356,6 @@ PrefabInstance:
     - target: {fileID: 6607533465649825532, guid: 22f58416ee301fd46bb2e3127b2a0d77, type: 3}
       propertyPath: m_Name
       value: Car Oil (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6607533465649825532, guid: 22f58416ee301fd46bb2e3127b2a0d77, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -71193,10 +71117,6 @@ PrefabInstance:
     - target: {fileID: 6155553682125402997, guid: 147a46d2188216b49af25ed34a59d2d6, type: 3}
       propertyPath: m_Name
       value: Salt & Vinegar Potato Chips Small (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6155553682125402997, guid: 147a46d2188216b49af25ed34a59d2d6, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6784457167930845647, guid: 147a46d2188216b49af25ed34a59d2d6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -81483,7 +81403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2150032300541630847, guid: 23bb758e88dd67145a081705d63d8624, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5500004
+      value: 2.5500002
       objectReference: {fileID: 0}
     - target: {fileID: 2150032300541630847, guid: 23bb758e88dd67145a081705d63d8624, type: 3}
       propertyPath: m_LocalPosition.z
@@ -81495,15 +81415,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2150032300541630847, guid: 23bb758e88dd67145a081705d63d8624, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.000000049378116
+      value: -0.0000000074487696
       objectReference: {fileID: 0}
     - target: {fileID: 2150032300541630847, guid: 23bb758e88dd67145a081705d63d8624, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000042146844
+      value: -0.000000007425815
       objectReference: {fileID: 0}
     - target: {fileID: 2150032300541630847, guid: 23bb758e88dd67145a081705d63d8624, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 2.9431653e-15
+      value: -5.5303976e-17
       objectReference: {fileID: 0}
     - target: {fileID: 2561466223287972479, guid: 23bb758e88dd67145a081705d63d8624, type: 3}
       propertyPath: field of view
@@ -81531,7 +81451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4743376029580660747, guid: 23bb758e88dd67145a081705d63d8624, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5500004
+      value: 2.5500002
       objectReference: {fileID: 0}
     - target: {fileID: 4743376029580660747, guid: 23bb758e88dd67145a081705d63d8624, type: 3}
       propertyPath: m_LocalPosition.z
@@ -81543,15 +81463,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4743376029580660747, guid: 23bb758e88dd67145a081705d63d8624, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.000000049378116
+      value: -0.0000000074487696
       objectReference: {fileID: 0}
     - target: {fileID: 4743376029580660747, guid: 23bb758e88dd67145a081705d63d8624, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000042146844
+      value: -0.000000007425815
       objectReference: {fileID: 0}
     - target: {fileID: 4743376029580660747, guid: 23bb758e88dd67145a081705d63d8624, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -2.0811318e-15
+      value: -5.5313187e-17
       objectReference: {fileID: 0}
     - target: {fileID: 7265456108062214660, guid: 23bb758e88dd67145a081705d63d8624, type: 3}
       propertyPath: m_LocalPosition.x
@@ -83621,10 +83541,6 @@ PrefabInstance:
     - target: {fileID: 306536924686126214, guid: afa4058a1de688e4fbd703742eddd919, type: 3}
       propertyPath: m_Name
       value: Dill Pickle Potato Chips Large
-      objectReference: {fileID: 0}
-    - target: {fileID: 306536924686126214, guid: afa4058a1de688e4fbd703742eddd919, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1083917365504464444, guid: afa4058a1de688e4fbd703742eddd919, type: 3}
       propertyPath: m_LocalPosition.x
@@ -87976,10 +87892,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Can of Cola (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 2913880152873700321, guid: bf041cb20d3358147b939afae076b98a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -89602,10 +89514,6 @@ PrefabInstance:
     - target: {fileID: 3709657378455988119, guid: 9d08c193058422f41a5bb411c820aa33, type: 3}
       propertyPath: m_Name
       value: Can of Sprits (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3709657378455988119, guid: 9d08c193058422f41a5bb411c820aa33, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4048886799902637357, guid: 9d08c193058422f41a5bb411c820aa33, type: 3}
       propertyPath: m_LocalPosition.x
@@ -94964,10 +94872,6 @@ PrefabInstance:
     - target: {fileID: 4783518813163833213, guid: 12af11c83d3073e4f92073fa89dce54a, type: 3}
       propertyPath: m_Name
       value: Floor Cleaner Bottle (31)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4783518813163833213, guid: 12af11c83d3073e4f92073fa89dce54a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5271931380680826311, guid: 12af11c83d3073e4f92073fa89dce54a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -103271,10 +103175,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cleaner Spray #1 (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 8730478033527880562, guid: 5f13c4cbe62074747a119a0fccb74c70, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -103433,10 +103333,6 @@ PrefabInstance:
     - target: {fileID: 2776912664395799474, guid: 21965c4825a5e0a46ab2cc18e85fb450, type: 3}
       propertyPath: m_Name
       value: Large Grape Drink (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2776912664395799474, guid: 21965c4825a5e0a46ab2cc18e85fb450, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3297272607994806536, guid: 21965c4825a5e0a46ab2cc18e85fb450, type: 3}
       propertyPath: m_LocalPosition.x
@@ -106252,10 +106148,6 @@ PrefabInstance:
     - target: {fileID: 2018932083739662942, guid: ea40ce6f75744e74eaf48a98bc28d15e, type: 3}
       propertyPath: m_Name
       value: Large Cola Drink (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2018932083739662942, guid: ea40ce6f75744e74eaf48a98bc28d15e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -110852,10 +110744,6 @@ PrefabInstance:
     - target: {fileID: 5204169028162287714, guid: dfedcb93b0e5dea439aff964ef9f6a08, type: 3}
       propertyPath: m_Name
       value: Milk Carton
-      objectReference: {fileID: 0}
-    - target: {fileID: 5204169028162287714, guid: dfedcb93b0e5dea439aff964ef9f6a08, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -119639,10 +119527,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Milk Carton Small
       objectReference: {fileID: 0}
-    - target: {fileID: 947031899382385557, guid: 9c2e8e63fa9238f4aa0ddb05266bf1a1, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -120419,10 +120303,6 @@ PrefabInstance:
     - target: {fileID: 3707853801501385719, guid: 370184d414aa9ac478a11b1b5bf10366, type: 3}
       propertyPath: m_Name
       value: Large Sprits Drink (14)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3707853801501385719, guid: 370184d414aa9ac478a11b1b5bf10366, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4052995365671156045, guid: 370184d414aa9ac478a11b1b5bf10366, type: 3}
       propertyPath: m_LocalPosition.x
@@ -129918,10 +129798,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Air Freshner
       objectReference: {fileID: 0}
-    - target: {fileID: 4834585981122359979, guid: 79b82f649d89d2a4ea3a08ea8d32b730, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5214102913044047889, guid: 79b82f649d89d2a4ea3a08ea8d32b730, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.16100025
@@ -132326,10 +132202,6 @@ PrefabInstance:
     - target: {fileID: 4725070419791810163, guid: e8c597202736a03419158b9ce3e21ebe, type: 3}
       propertyPath: m_Name
       value: Window Fluid Pink (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4725070419791810163, guid: e8c597202736a03419158b9ce3e21ebe, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5393344432807728329, guid: e8c597202736a03419158b9ce3e21ebe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -144491,10 +144363,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ketchup Potato Chips Large (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 6088675366717266677, guid: 63617ae36dda2e944a9ba7c650729f95, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 6860250313986326607, guid: 63617ae36dda2e944a9ba7c650729f95, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -146266,8 +146134,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8bd9e0aaf4f09684dba01f4cf4098d55, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1564403657}
   m_SourcePrefab: {fileID: 100100000, guid: 8bd9e0aaf4f09684dba01f4cf4098d55, type: 3}
+--- !u!1 &1564403656 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8bd9e0aaf4f09684dba01f4cf4098d55, type: 3}
+  m_PrefabInstance: {fileID: 1564403655}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1564403657
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564403656}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8906563331131944060, guid: 8bd9e0aaf4f09684dba01f4cf4098d55, type: 3}
 --- !u!1001 &1564430198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -148212,18 +148110,6 @@ PrefabInstance:
     - target: {fileID: 1435329840684973524, guid: bb62efc7736fe8c4a9332a2af6fa9e5a, type: 3}
       propertyPath: m_Name
       value: Box of Chocolate Bars #1 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435329840684973524, guid: bb62efc7736fe8c4a9332a2af6fa9e5a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 1774559326539343726, guid: bb62efc7736fe8c4a9332a2af6fa9e5a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2385
-      objectReference: {fileID: 0}
-    - target: {fileID: 1774559326539343726, guid: bb62efc7736fe8c4a9332a2af6fa9e5a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.69887996
       objectReference: {fileID: 0}
     - target: {fileID: 1774559326539343726, guid: bb62efc7736fe8c4a9332a2af6fa9e5a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -155446,10 +155332,6 @@ PrefabInstance:
     - target: {fileID: 335244265065371884, guid: b583a3e2a071d9741906efd7987431ba, type: 3}
       propertyPath: m_Name
       value: Salt & Vinegar Potato Chips Large
-      objectReference: {fileID: 0}
-    - target: {fileID: 335244265065371884, guid: b583a3e2a071d9741906efd7987431ba, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1147527638227944022, guid: b583a3e2a071d9741906efd7987431ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -164054,10 +163936,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dill Pickle Potato Chips Small (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 3537532725841201245, guid: e62bf1ac85eee2240b47e6b242b96ce4, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 4205244849829827303, guid: e62bf1ac85eee2240b47e6b242b96ce4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -165029,10 +164907,6 @@ PrefabInstance:
     - target: {fileID: 7994883399767059212, guid: 0b8ac24189411f64d83d99c91d66bb70, type: 3}
       propertyPath: m_Name
       value: Can of Grape (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7994883399767059212, guid: 0b8ac24189411f64d83d99c91d66bb70, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

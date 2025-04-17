@@ -3,32 +3,46 @@ using UnityEngine;
 public class PickupBehavior : MonoBehaviour
 {
     public float interactDistance = 2f;
-    public float sphereRadius = 0.3f;
+    public float interactAngle = 30f; // Field of view tolerance (in degrees)
     public LayerMask interactableLayer;
     public KeyCode interactKey = KeyCode.F;
 
     private GameObject currentTarget;
+    private Camera mainCamera;
+
+    void Start()
+    {
+        mainCamera = Camera.main;
+    }
 
     void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
-        RaycastHit hit;
+        Collider[] nearbyItems = Physics.OverlapSphere(transform.position, interactDistance, interactableLayer);
+        GameObject bestCandidate = null;
+        float bestAngle = interactAngle;
 
-        // 🔹 Draw the SphereCast line (center ray) in Scene view
-        Debug.DrawRay(ray.origin, ray.direction * interactDistance, Color.cyan);
-
-        // Perform the SphereCast
-        if (Physics.SphereCast(ray, sphereRadius, out hit, interactDistance, interactableLayer))
+        foreach (Collider col in nearbyItems)
         {
-            GameObject hitObject = hit.collider.gameObject;
+            Vector3 toItem = col.transform.position - mainCamera.transform.position;
+            float angle = Vector3.Angle(mainCamera.transform.forward, toItem);
 
-            if (hitObject.GetComponent<ItemBehavior>() == null)
-                return;
-
-            if (hitObject != currentTarget)
+            if (angle < bestAngle)
             {
-                currentTarget = hitObject;
-                ShowPrompt(true, hitObject.name);
+                // Optional: confirm it's an interactable item
+                if (col.GetComponent<ItemBehavior>() != null)
+                {
+                    bestAngle = angle;
+                    bestCandidate = col.gameObject;
+                }
+            }
+        }
+
+        if (bestCandidate != null)
+        {
+            if (currentTarget != bestCandidate)
+            {
+                currentTarget = bestCandidate;
+                ShowPrompt(true, currentTarget.name);
             }
 
             if (Input.GetKeyDown(interactKey))
@@ -36,13 +50,10 @@ public class PickupBehavior : MonoBehaviour
                 PickUpItem(currentTarget);
             }
         }
-        else
+        else if (currentTarget != null)
         {
-            if (currentTarget != null)
-            {
-                ShowPrompt(false);
-                currentTarget = null;
-            }
+            ShowPrompt(false);
+            currentTarget = null;
         }
     }
 
@@ -57,7 +68,7 @@ public class PickupBehavior : MonoBehaviour
     {
         if (show)
         {
-            Debug.Log($"[E] to pick up {itemName}");
+            Debug.Log($"[F] to pick up {itemName}");
         }
         else
         {

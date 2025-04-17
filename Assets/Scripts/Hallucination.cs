@@ -10,10 +10,15 @@ public class Hallucination : MonoBehaviour
     public Camera mainCamera; // assign your 3rd person cam here
     public float duration = 20f;
 
+    [Header("Third Hallucination Settings")]
+    public ParticleSystem drippingEffect;
+    public GameObject water;
+
     [Header("Final Hallucination Settings")]
     public GameObject universalLight;
 
     string[] originalTexts;
+    Material originalMaterial;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,6 +29,7 @@ public class Hallucination : MonoBehaviour
             originalTexts[i] = aisleTexts[i].text;
         }
 
+        originalMaterial = water.GetComponent<Renderer>().material;
     }
 
     // number is the number of the hallucination you want to trigger
@@ -33,6 +39,9 @@ public class Hallucination : MonoBehaviour
         {
             case HallucinationType.First:
                 FirstHallucination();
+                break;
+            case HallucinationType.Third:
+                ThirdHallucination();
                 break;
             case HallucinationType.Fifth:
                 FinalHallucination();
@@ -47,14 +56,20 @@ public class Hallucination : MonoBehaviour
     void FirstHallucination()
     {
         ShuffleSigns();
-        StartCoroutine(RestoreSignsAfterDelay(duration, RestoreSigns));
+        StartCoroutine(RestoreHallucination(duration, RestoreSigns));
+    }
+
+    void ThirdHallucination()
+    {
+        ChangeWater();
+        StartCoroutine(RestoreHallucination(duration, RestoreWater));
     }
 
     void FinalHallucination()
     {
         BlinkingLights.ActivateHallucination();
         universalLight.SetActive(false);
-        StartCoroutine(RestoreSignsAfterDelay(duration, ResetLights));
+        StartCoroutine(RestoreHallucination(duration, ResetLights));
     }
 
 
@@ -71,6 +86,13 @@ public class Hallucination : MonoBehaviour
         }
     }
 
+    void ChangeWater()
+    {
+        water.GetComponent<Renderer>().material.color = Color.red;
+        var main = drippingEffect.main;
+        main.startColor = Color.red;
+    }
+
     void RestoreSigns()
     {
         for (int i = 0; i < aisleTexts.Length; i++)
@@ -79,13 +101,20 @@ public class Hallucination : MonoBehaviour
         }
     }
 
+    void RestoreWater()
+    {
+        water.GetComponent<Renderer>().material.color = originalMaterial.color;
+        var main = drippingEffect.main;
+        main.startColor = originalMaterial.color;
+    }
+
     void ResetLights()
     {
         BlinkingLights.ActivateHallucination();
         universalLight.SetActive(true);
     }
 
-    private IEnumerator RestoreSignsAfterDelay(float delay, Action action)
+    private IEnumerator RestoreHallucination(float delay, Action action)
     {
         yield return new WaitForSeconds(delay); // Wait for the given duration
         action?.Invoke(); // invoke specified "reset" function

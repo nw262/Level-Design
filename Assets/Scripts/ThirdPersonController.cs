@@ -14,7 +14,7 @@ public class ThirdPersonController : MonoBehaviour
     public float cameraFollowY;
     public float cameraFollowZ;
 
-    [Header("Shopping List settings")]
+    [Header("Shopping List Settings")]
     public GameObject shoppingList;
     private bool listIsActive = false;
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -8,7 +9,10 @@ public class Hallucination : MonoBehaviour
     public TMP_Text[] aisleTexts;
     public Camera mainCamera; // assign your 3rd person cam here
     public float duration = 20f;
-    
+
+    [Header("Final Hallucination Settings")]
+    public GameObject universalLight;
+
     string[] originalTexts;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -30,6 +34,9 @@ public class Hallucination : MonoBehaviour
             case HallucinationType.First:
                 FirstHallucination();
                 break;
+            case HallucinationType.Fifth:
+                FinalHallucination();
+                break;
             default:
                 Debug.Log("Invalid Number");
                 break;
@@ -40,7 +47,14 @@ public class Hallucination : MonoBehaviour
     void FirstHallucination()
     {
         ShuffleSigns();
-        StartCoroutine(RestoreSignsAfterDelay(duration));
+        StartCoroutine(RestoreSignsAfterDelay(duration, RestoreSigns));
+    }
+
+    void FinalHallucination()
+    {
+        BlinkingLights.ActivateHallucination();
+        universalLight.SetActive(false);
+        StartCoroutine(RestoreSignsAfterDelay(duration, ResetLights));
     }
 
 
@@ -48,7 +62,7 @@ public class Hallucination : MonoBehaviour
     {
         for (int i = aisleTexts.Length - 1; i > 0; i--)
         {
-            int j = Random.Range(0, i + 1);
+            int j = UnityEngine.Random.Range(0, i + 1);
 
             // Swap text values between signTexts[i] and signTexts[j]
             string temp = aisleTexts[i].text;
@@ -65,9 +79,15 @@ public class Hallucination : MonoBehaviour
         }
     }
 
-    private IEnumerator RestoreSignsAfterDelay(float delay)
+    void ResetLights()
+    {
+        BlinkingLights.ActivateHallucination();
+        universalLight.SetActive(true);
+    }
+
+    private IEnumerator RestoreSignsAfterDelay(float delay, Action action)
     {
         yield return new WaitForSeconds(delay); // Wait for the given duration
-        RestoreSigns(); // Restore the original texts after the wait time
+        action?.Invoke(); // invoke specified "reset" function
     }
 }

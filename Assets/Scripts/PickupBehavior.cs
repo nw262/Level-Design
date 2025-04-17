@@ -2,17 +2,19 @@ using UnityEngine;
 
 public class PickupBehavior : MonoBehaviour
 {
-    public float interactDistance = 2f;
+    public float interactDistance = 3f;
     public float interactAngle = 30f; // Field of view tolerance (in degrees)
     public LayerMask interactableLayer;
     public KeyCode interactKey = KeyCode.F;
 
     private GameObject currentTarget;
     private Camera mainCamera;
+    private string[] itemList = {"Chips", "Soda", "Milk", "Ice Cream", "Air Freshener", "Toilet Paper", "Bananas", "Apples", "Chocolate", "Magazine"};
 
     void Start()
     {
         mainCamera = Camera.main;
+
     }
 
     void Update()
@@ -46,7 +48,8 @@ public class PickupBehavior : MonoBehaviour
             }
 
             if (Input.GetKeyDown(interactKey))
-            {
+            {   
+                if (currentTarget.name ==  )
                 PickUpItem(currentTarget);
             }
         }

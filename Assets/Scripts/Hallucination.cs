@@ -17,11 +17,16 @@ public class Hallucination : MonoBehaviour
     public ParticleSystem drippingEffect;
     public GameObject water;
 
+    [Header("Fourth Hallucination Settings")]
+    public GameObject normalCashier;
+    public GameObject scaryCashier;
+
     [Header("Final Hallucination Settings")]
     public GameObject universalLight;
 
     string[] originalTexts;
     Material originalMaterial;
+    bool hallucinationCashier = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,7 +40,6 @@ public class Hallucination : MonoBehaviour
         originalMaterial = water.GetComponent<Renderer>().material;
     }
 
-    // number is the number of the hallucination you want to trigger
     public void TriggerHallucination(HallucinationType type)
     {   
         switch(type)
@@ -48,6 +52,9 @@ public class Hallucination : MonoBehaviour
                 break;
             case HallucinationType.Third:
                 ThirdHallucination();
+                break;
+            case HallucinationType.Fourth:
+                FourthHallucination();
                 break;
             case HallucinationType.Fifth:
                 FinalHallucination();
@@ -75,6 +82,11 @@ public class Hallucination : MonoBehaviour
     {
         ChangeWater();
         StartCoroutine(RestoreHallucination(duration, RestoreWater));
+    }
+
+    void FourthHallucination()
+    {
+        ChangeCashier();
     }
 
     void FinalHallucination()
@@ -108,6 +120,14 @@ public class Hallucination : MonoBehaviour
     void PauseMusic()
     {
         musicSource.GetComponent<AudioSource>().Pause();
+    }
+
+    void ChangeCashier()
+    {   
+        hallucinationCashier = !hallucinationCashier;
+
+        normalCashier.SetActive(!hallucinationCashier);
+        scaryCashier.SetActive(hallucinationCashier);
     }
 
     void RestoreSigns()

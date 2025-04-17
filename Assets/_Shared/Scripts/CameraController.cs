@@ -16,13 +16,13 @@ public class CameraController : MonoBehaviour
     void FixedUpdate()
     {
         float mouseX = Input.GetAxis("Mouse X") * sensitivity;
-        //float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 
-        //xRotation -= mouseY;
-        //xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         player.Rotate(Vector3.up * mouseX * Time.deltaTime);
-        //transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
     }
 }

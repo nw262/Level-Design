@@ -10,6 +10,9 @@ public class Hallucination : MonoBehaviour
     public Camera mainCamera; // assign your 3rd person cam here
     public float duration = 20f;
 
+    [Header("Second Hallucination Settings")]
+    public GameObject musicSource;
+
     [Header("Third Hallucination Settings")]
     public ParticleSystem drippingEffect;
     public GameObject water;
@@ -40,6 +43,9 @@ public class Hallucination : MonoBehaviour
             case HallucinationType.First:
                 FirstHallucination();
                 break;
+            case HallucinationType.Second:
+                SecondHallucination();
+                break;
             case HallucinationType.Third:
                 ThirdHallucination();
                 break;
@@ -57,6 +63,12 @@ public class Hallucination : MonoBehaviour
     {
         ShuffleSigns();
         StartCoroutine(RestoreHallucination(duration, RestoreSigns));
+    }
+
+    void SecondHallucination()
+    {
+        PauseMusic();
+        StartCoroutine(RestoreHallucination(5f, PlayMusic));
     }
 
     void ThirdHallucination()
@@ -93,6 +105,11 @@ public class Hallucination : MonoBehaviour
         main.startColor = Color.red;
     }
 
+    void PauseMusic()
+    {
+        musicSource.GetComponent<AudioSource>().Pause();
+    }
+
     void RestoreSigns()
     {
         for (int i = 0; i < aisleTexts.Length; i++)
@@ -106,6 +123,11 @@ public class Hallucination : MonoBehaviour
         water.GetComponent<Renderer>().material.color = originalMaterial.color;
         var main = drippingEffect.main;
         main.startColor = originalMaterial.color;
+    }
+
+    void PlayMusic()
+    {
+        musicSource.GetComponent<AudioSource>().Play();
     }
 
     void ResetLights()

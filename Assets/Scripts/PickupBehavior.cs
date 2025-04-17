@@ -1,3 +1,4 @@
+using cakeslice;
 using UnityEngine;
 
 public class PickupBehavior : MonoBehaviour
@@ -6,15 +7,30 @@ public class PickupBehavior : MonoBehaviour
     public float interactAngle = 30f; // Field of view tolerance (in degrees)
     public LayerMask interactableLayer;
     public KeyCode interactKey = KeyCode.F;
+    public GameObject pickupItems;
 
     private GameObject currentTarget;
     private Camera mainCamera;
-    private string[] itemList = {"Chips", "Soda", "Milk", "Ice Cream", "Air Freshener", "Toilet Paper", "Bananas", "Apples", "Chocolate", "Magazine"};
+    private GameObject[] itemList;
+    private int currentItem = 0;
 
     void Start()
     {
         mainCamera = Camera.main;
 
+        itemList = new GameObject[pickupItems.transform.childCount];
+
+        for (int i = 0; i < pickupItems.transform.childCount; i++)
+        {   
+            if (pickupItems.transform.GetChild(i).tag == "ToiletPaper")
+            {
+                itemList[i] = pickupItems.transform.GetChild(i).GetChild(0).gameObject;
+            }
+            else
+                itemList[i] = pickupItems.transform.GetChild(i).gameObject;
+        }
+
+        itemList[0].GetComponent<Outline>().eraseRenderer = false;
     }
 
     void Update()
@@ -49,8 +65,13 @@ public class PickupBehavior : MonoBehaviour
 
             if (Input.GetKeyDown(interactKey))
             {   
-                if (currentTarget.name ==  )
-                PickUpItem(currentTarget);
+                if (currentTarget.name == itemList[currentItem].name)
+                {
+                    PickUpItem(currentTarget);
+                    currentItem++;
+                    if (currentItem < itemList.Length)
+                        itemList[currentItem].GetComponent<Outline>().eraseRenderer = false;
+                }
             }
         }
         else if (currentTarget != null)
@@ -63,7 +84,11 @@ public class PickupBehavior : MonoBehaviour
     void PickUpItem(GameObject item)
     {
         Debug.Log("Picked up: " + item.name);
-        Destroy(item);
+        if (item.tag == "ToiletPaper")
+            Destroy(item.transform.parent.gameObject);
+        else
+            Destroy(item);
+
         ShowPrompt(false);
     }
 

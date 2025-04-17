@@ -8,7 +8,7 @@ public class ItemBehavior : MonoBehaviour
 
     void OnDestroy()
     {   
-        if (!Application.IsPlaying(gameObject))
+        if (!Application.IsPlaying(gameObject) || gameObject == null)
             return;
 
         if (type != HallucinationType.None)

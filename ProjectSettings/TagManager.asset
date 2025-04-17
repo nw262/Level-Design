@@ -16,6 +16,8 @@ TagManager:
   - Stairs
   - Head
   - Dialogue
+  - Item
+  - ToiletPaper
   layers:
   - Default
   - TransparentFX

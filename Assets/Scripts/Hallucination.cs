@@ -28,7 +28,7 @@ public class Hallucination : MonoBehaviour
     public GameObject[] fallingShelves;
     public GameObject screenBlock;
     public CinemachineCamera firstPerson;
-
+    public AudioClip fallingSFX;
 
     string[] originalTexts;
     Material originalMaterial;
@@ -99,6 +99,8 @@ public class Hallucination : MonoBehaviour
     {
         BlinkingLights.ActivateHallucination();
         universalLight.SetActive(false);
+
+        AudioSource.PlayClipAtPoint(fallingSFX, mainCamera.transform.position);
 
         foreach (var shelf in standingShelves)
         {
@@ -196,6 +198,7 @@ public class Hallucination : MonoBehaviour
         firstPerson.Priority = 30;
         yield return new WaitForSeconds(2);
         ResetLights();
+        ChangeCashier();
         screenBlock.SetActive(false);
     }
 }

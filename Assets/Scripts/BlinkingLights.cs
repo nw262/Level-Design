@@ -4,6 +4,7 @@ public class BlinkingLights : MonoBehaviour
 {
     public GameObject[] lights;
     public GameObject emissionLight;
+    public AudioSource lightSFX;
 
     private Material emissionMaterial;
     private float blinkSpeed = 0.1f; // How fast the lights blink
@@ -21,9 +22,14 @@ public class BlinkingLights : MonoBehaviour
     void Update()
     {   
         if (!hallucinationActive)
+        {
+            lightSFX.Stop();
             return;
+        }
 
         timer += Time.deltaTime;
+
+        lightSFX.Play();
 
         if (timer >= blinkSpeed)
         {

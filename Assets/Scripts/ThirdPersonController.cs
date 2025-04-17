@@ -8,6 +8,9 @@ public class ThirdPersonController : MonoBehaviour
     public CharacterController controller;
     //public CinemachineThirdPersonFollow followCM;
     public Animator animator;
+    public AudioSource walkingSFX;
+
+    public AudioClip walkSFX;
 
     /*
     [Header("Camera Follow Settings")]
@@ -28,6 +31,9 @@ public class ThirdPersonController : MonoBehaviour
     {
         //followCM.ShoulderOffset = new Vector3(cameraFollowX, cameraFollowY, cameraFollowZ);
         shoppingList.SetActive(false);
+
+        walkingSFX = GetComponent<AudioSource>();
+        walkingSFX.clip = walkSFX;
     }
 
     // Update is called once per frame
@@ -46,10 +52,12 @@ public class ThirdPersonController : MonoBehaviour
             if (input.magnitude >= 0.01)
             {
                 animator.SetBool("Walking", true);
+                walkingSFX.Play();
             }
             else
             {
                 animator.SetBool("Walking", false);
+                walkingSFX.Pause();
             }
         }
 

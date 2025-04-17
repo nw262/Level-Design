@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 8242488021744083400}
   - component: {fileID: 5029650770224017005}
   - component: {fileID: 7072938346634812071}
-  - component: {fileID: 6943888012144684348}
+  - component: {fileID: 8496474257202251302}
   m_Layer: 0
   m_Name: Cleaner Spray #1
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &8242488021744083400
 Transform:
@@ -87,8 +87,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6943888012144684348
-BoxCollider:
+--- !u!64 &8496474257202251302
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,6 +105,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.10442151, y: 0.39298353, z: 0.23496062}
-  m_Center: {x: 0.0011577122, y: 0.19649176, z: 0.0065592267}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1668624484872250688, guid: 1ca36c002a67c3041a74646a7fc7b1c9, type: 3}

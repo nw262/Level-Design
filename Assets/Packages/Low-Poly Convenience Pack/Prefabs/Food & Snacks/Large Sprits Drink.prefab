@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 4052995365671156045}
   - component: {fileID: 1121671575715526376}
   - component: {fileID: 2914969234528125474}
-  - component: {fileID: 8749736608580343094}
+  - component: {fileID: 4590743288828354211}
   m_Layer: 0
   m_Name: Large Sprits Drink
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4052995365671156045
 Transform:
@@ -87,8 +87,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &8749736608580343094
-CapsuleCollider:
+--- !u!64 &4590743288828354211
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,8 +105,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.12480661
-  m_Height: 0.65375584
-  m_Direction: 1
-  m_Center: {x: -0.00000027939677, y: 0.32687816, z: 0.00000022724271}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3828577677652199091, guid: 9e8dff79bf13bc1418f0ad4f905fc8ca, type: 3}

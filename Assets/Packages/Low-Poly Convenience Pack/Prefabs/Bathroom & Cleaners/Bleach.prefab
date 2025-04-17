@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 3670810816323872154}
   - component: {fileID: 386902097404783167}
   - component: {fileID: 2502446828142370549}
-  - component: {fileID: 2128373522277127950}
+  - component: {fileID: 3853937240893293172}
   m_Layer: 0
   m_Name: Bleach
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &3670810816323872154
 Transform:
@@ -87,8 +87,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2128373522277127950
-BoxCollider:
+--- !u!64 &3853937240893293172
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,6 +105,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.2423707, y: 0.40225312, z: 0.19356844}
-  m_Center: {x: 0.027669135, y: 0.20112656, z: -0.0000000037252903}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3241742186003101016, guid: 6b34059cb263d8d4d9cd9473967aab12, type: 3}

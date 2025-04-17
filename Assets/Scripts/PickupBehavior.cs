@@ -1,4 +1,5 @@
 using cakeslice;
+using TMPro;
 using UnityEngine;
 
 public class PickupBehavior : MonoBehaviour
@@ -8,11 +9,13 @@ public class PickupBehavior : MonoBehaviour
     public LayerMask interactableLayer;
     public KeyCode interactKey = KeyCode.F;
     public GameObject pickupItems;
+    public TMP_Text pickupPrompt;
 
     private GameObject currentTarget;
     private Camera mainCamera;
     private GameObject[] itemList;
     private int currentItem = 0;
+    private bool interact;
 
     void Start()
     {
@@ -52,6 +55,13 @@ public class PickupBehavior : MonoBehaviour
                     bestAngle = angle;
                     bestCandidate = col.gameObject;
                 }
+
+                if (col.GetComponent<CashierBehavior>() != null && currentItem == itemList.Length)
+                {
+                    interact = true;
+                    bestAngle = angle;
+                    bestCandidate = col.gameObject;
+                }
             }
         }
 
@@ -60,12 +70,17 @@ public class PickupBehavior : MonoBehaviour
             if (currentTarget != bestCandidate)
             {
                 currentTarget = bestCandidate;
-                ShowPrompt(true, currentTarget.name);
+                if (interact)
+                    ShowPrompt(true, "Cashier");
+                else if (currentTarget.name == itemList[currentItem].name)
+                    ShowPrompt(true, currentTarget.name);
             }
 
             if (Input.GetKeyDown(interactKey))
-            {   
-                if (currentTarget.name == itemList[currentItem].name)
+            {
+                if (interact)
+                    currentTarget.GetComponent<CashierBehavior>().TurnAround();
+                else if (currentTarget.name == itemList[currentItem].name)
                 {
                     PickUpItem(currentTarget);
                     currentItem++;
@@ -79,6 +94,7 @@ public class PickupBehavior : MonoBehaviour
             ShowPrompt(false);
             currentTarget = null;
         }
+
     }
 
     void PickUpItem(GameObject item)
@@ -94,13 +110,21 @@ public class PickupBehavior : MonoBehaviour
 
     void ShowPrompt(bool show, string itemName = "")
     {
-        if (show)
+        if (show && itemName == "Cashier")
         {
-            Debug.Log($"[F] to pick up {itemName}");
+            pickupPrompt.text = $"[F] Checkout";
+
+        }
+        else if (show)
+        {   
+            pickupPrompt.text = $"[F] Pick Up {itemName}";
+            // Debug.Log($"[F] to pick up {itemName}");
         }
         else
         {
             Debug.Log(" ");
         }
+
+        pickupPrompt.gameObject.SetActive(show);
     }
 }

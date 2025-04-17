@@ -11,6 +11,10 @@ public class ItemBehavior : MonoBehaviour
         if (!Application.IsPlaying(gameObject) || gameObject == null)
             return;
 
+        // Safely skip if required references are null
+        if (hallucinationManager == null || crossout == null)
+            return;
+
         if (type != HallucinationType.None)
             hallucinationManager.TriggerHallucination(type);
 

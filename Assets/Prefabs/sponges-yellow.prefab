@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 7a274e8cdea7c4f87a94dc4adc7167ad, type: 2}
     - target: {fileID: 919132149155446097, guid: 0779435db06c74c98b2807d1efd5e0da, type: 3}
       propertyPath: m_Name
-      value: sponges
+      value: sponges-yellow
       objectReference: {fileID: 0}
     - target: {fileID: 6767654235557323724, guid: 0779435db06c74c98b2807d1efd5e0da, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

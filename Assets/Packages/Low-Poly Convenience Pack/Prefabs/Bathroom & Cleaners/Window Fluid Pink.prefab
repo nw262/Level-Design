@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 9040652699088640876}
   - component: {fileID: 6526330431506886566}
   - component: {fileID: 5440037766193714714}
-  m_Layer: 0
+  - component: {fileID: 9066356754816401849}
+  m_Layer: 7
   m_Name: Window Fluid Pink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5393344432807728329
 Transform:
@@ -108,3 +109,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3787744, y: 0.4150616, z: 0.14363018}
   m_Center: {x: 0.060326494, y: 0.20753092, z: -0.00000048056245}
+--- !u!54 &9066356754816401849
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4725070419791810163}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

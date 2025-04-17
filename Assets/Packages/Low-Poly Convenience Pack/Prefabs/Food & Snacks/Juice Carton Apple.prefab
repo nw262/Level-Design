@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5487004540125921430}
   - component: {fileID: 6621509913477373421}
   - component: {fileID: 6188931680539527199}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Juice Carton Apple
   m_TagString: Item
   m_Icon: {fileID: 0}

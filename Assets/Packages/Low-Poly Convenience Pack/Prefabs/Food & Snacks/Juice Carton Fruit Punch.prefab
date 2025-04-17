@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3941811540808377491}
   - component: {fileID: 2411032289804400648}
   - component: {fileID: 2215860121721753437}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Juice Carton Fruit Punch
   m_TagString: Item
   m_Icon: {fileID: 0}

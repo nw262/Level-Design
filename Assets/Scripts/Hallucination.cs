@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using TMPro;
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class Hallucination : MonoBehaviour
@@ -23,6 +24,11 @@ public class Hallucination : MonoBehaviour
 
     [Header("Final Hallucination Settings")]
     public GameObject universalLight;
+    public GameObject[] standingShelves;
+    public GameObject[] fallingShelves;
+    public GameObject screenBlock;
+    public CinemachineCamera firstPerson;
+
 
     string[] originalTexts;
     Material originalMaterial;
@@ -93,7 +99,17 @@ public class Hallucination : MonoBehaviour
     {
         BlinkingLights.ActivateHallucination();
         universalLight.SetActive(false);
-        StartCoroutine(RestoreHallucination(duration, ResetLights));
+
+        foreach (var shelf in standingShelves)
+        {
+            shelf.SetActive(false);
+        }
+        foreach (var shelf in fallingShelves)
+        {
+            shelf.SetActive(true);
+        }
+
+        StartCoroutine(RestoreFinal());
     }
 
 
@@ -117,7 +133,7 @@ public class Hallucination : MonoBehaviour
         main.startColor = Color.red;
     }
 
-    void PauseMusic()
+    public void PauseMusic()
     {
         musicSource.GetComponent<AudioSource>().Pause();
     }
@@ -154,11 +170,32 @@ public class Hallucination : MonoBehaviour
     {
         BlinkingLights.ActivateHallucination();
         universalLight.SetActive(true);
+
+        foreach (var shelf in standingShelves)
+        {
+            shelf.SetActive(true);
+        }
+        foreach (var shelf in fallingShelves)
+        {
+            shelf.SetActive(false);
+        }
+
+        PlayMusic();
     }
 
     private IEnumerator RestoreHallucination(float delay, Action action)
     {
         yield return new WaitForSeconds(delay); // Wait for the given duration
         action?.Invoke(); // invoke specified "reset" function
+    }
+
+    private IEnumerator RestoreFinal()
+    {
+        yield return new WaitForSeconds(8); // Wait for the given duration
+        screenBlock.SetActive(true);
+        yield return new WaitForSeconds(2);
+        ResetLights();
+        firstPerson.Priority = 30;
+        screenBlock.SetActive(false);
     }
 }

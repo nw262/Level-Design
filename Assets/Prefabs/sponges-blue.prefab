@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0779435db06c74c98b2807d1efd5e0da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.145
+      value: -0.18599987
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0779435db06c74c98b2807d1efd5e0da, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0779435db06c74c98b2807d1efd5e0da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.05
+      value: -5.0860004
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0779435db06c74c98b2807d1efd5e0da, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0779435db06c74c98b2807d1efd5e0da, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0779435db06c74c98b2807d1efd5e0da, type: 3}
       propertyPath: m_LocalRotation.y
@@ -34,7 +34,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0779435db06c74c98b2807d1efd5e0da, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0779435db06c74c98b2807d1efd5e0da, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -64,9 +64,29 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 460035a802fe44cc59ddc508390f07f6, type: 2}
+    - target: {fileID: -658445816637125598, guid: 0779435db06c74c98b2807d1efd5e0da, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0779435db06c74c98b2807d1efd5e0da, type: 3}
       propertyPath: m_Name
       value: sponges-blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0779435db06c74c98b2807d1efd5e0da, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775600559536782834, guid: 0779435db06c74c98b2807d1efd5e0da, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5242644381045314590, guid: 0779435db06c74c98b2807d1efd5e0da, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903386287438877017, guid: 0779435db06c74c98b2807d1efd5e0da, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6767654235557323724, guid: 0779435db06c74c98b2807d1efd5e0da, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

@@ -18,6 +18,7 @@ TagManager:
   - Dialogue
   - Item
   - ToiletPaper
+  - Shelf
   layers:
   - Default
   - TransparentFX
@@ -25,8 +26,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Shelf
+  - ShelfItems
   - 
   - 
   - 

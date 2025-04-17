@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4860294960899138264}
   - component: {fileID: 8420859465054334333}
   - component: {fileID: 5996560877008738743}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Milk Carton
   m_TagString: Untagged
   m_Icon: {fileID: 0}

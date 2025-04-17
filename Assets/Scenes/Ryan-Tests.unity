@@ -342,7 +342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &798165137
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -444,6 +444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3336435802532069370, guid: 23bb758e88dd67145a081705d63d8624, type: 3}
+      propertyPath: m_ControllerManager.Controllers.Array.data[0].Input.LegacyGain
+      value: 140
+      objectReference: {fileID: 0}
     - target: {fileID: 7265456108062214660, guid: 23bb758e88dd67145a081705d63d8624, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.399
@@ -484,10 +488,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8450770710664823218, guid: 23bb758e88dd67145a081705d63d8624, type: 3}
+      propertyPath: sensitivity
+      value: 140
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8539991333931068279, guid: 23bb758e88dd67145a081705d63d8624, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1865546408}
   m_SourcePrefab: {fileID: 100100000, guid: 23bb758e88dd67145a081705d63d8624, type: 3}
 --- !u!1 &1670522630
 GameObject:
@@ -598,6 +609,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1865546401 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8539991333931068279, guid: 23bb758e88dd67145a081705d63d8624, type: 3}
+  m_PrefabInstance: {fileID: 1019335931}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1865546408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865546401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbe43d662878a7c43bcd44d43c9e2094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 1
+  IgnoreTag: Player
+  TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  MinimumDistanceFromTarget: 0.3
+  AvoidObstacles:
+    Enabled: 1
+    DistanceLimit: 0
+    MinimumOcclusionTime: 0
+    CameraRadius: 0.4
+    UseFollowTarget:
+      Enabled: 0
+      YOffset: 0
+    Strategy: 0
+    MaximumEffort: 2
+    SmoothingTime: 0
+    Damping: 0.4
+    DampingWhenOccluded: 0.2
+  ShotQualityEvaluation:
+    Enabled: 0
+    OptimalDistance: 10
+    NearLimit: 5
+    FarLimit: 30
+    MaxQualityBoost: 0.2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

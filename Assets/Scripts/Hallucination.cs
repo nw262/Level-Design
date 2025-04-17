@@ -193,9 +193,9 @@ public class Hallucination : MonoBehaviour
     {
         yield return new WaitForSeconds(8); // Wait for the given duration
         screenBlock.SetActive(true);
+        firstPerson.Priority = 30;
         yield return new WaitForSeconds(2);
         ResetLights();
-        firstPerson.Priority = 30;
         screenBlock.SetActive(false);
     }
 }

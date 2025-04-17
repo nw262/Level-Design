@@ -98933,8 +98933,10 @@ GameObject:
   - component: {fileID: 658859396}
   - component: {fileID: 658859398}
   - component: {fileID: 658859397}
+  - component: {fileID: 658859400}
+  - component: {fileID: 658859399}
   m_Layer: 0
-  m_Name: Cube (59)
+  m_Name: Magazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98949,11 +98951,11 @@ Transform:
   m_GameObject: {fileID: 658859395}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.22382621, z: 0.97462916, w: 0}
-  m_LocalPosition: {x: 0.054999948, y: -1.031, z: -0.017999649}
-  m_LocalScale: {x: 0.3, y: 0.45000008, z: 0.060000006}
+  m_LocalPosition: {x: -2.9220004, y: -0.352, z: 17.179}
+  m_LocalScale: {x: 0.3, y: 0.45000014, z: 0.060000006}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 724458619}
+  m_Father: {fileID: 1389687566}
   m_LocalEulerAnglesHint: {x: 25.868, y: 0, z: 180}
 --- !u!23 &658859397
 MeshRenderer:
@@ -99008,6 +99010,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 658859395}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &658859399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658859395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54c607ee12ccde74b9b9cedec8e75c3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crossout: {fileID: 1384052722}
+  hallucinationManager: {fileID: 1630177752}
+  type: 3
+--- !u!65 &658859400
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658859395}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0000004, y: 1.0000007, z: 1.000001}
+  m_Center: {x: -0.00000047683716, y: 0, z: 0}
 --- !u!1001 &659163627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -108128,7 +108166,6 @@ Transform:
   - {fileID: 1385766517}
   - {fileID: 1525731307}
   - {fileID: 271747425}
-  - {fileID: 658859396}
   - {fileID: 2147410940}
   - {fileID: 485149761}
   - {fileID: 985767988}
@@ -145849,23 +145886,23 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1389687566}
+    m_TransformParent: {fileID: 1434068051}
     m_Modifications:
     - target: {fileID: 5043682244327105648, guid: 8323f15e47eec9946848bd352256d035, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.232
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5043682244327105648, guid: 8323f15e47eec9946848bd352256d035, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6270001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5043682244327105648, guid: 8323f15e47eec9946848bd352256d035, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.0909996
+      value: 0.5630002
       objectReference: {fileID: 0}
     - target: {fileID: 5043682244327105648, guid: 8323f15e47eec9946848bd352256d035, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5043682244327105648, guid: 8323f15e47eec9946848bd352256d035, type: 3}
       propertyPath: m_LocalRotation.x
@@ -145873,7 +145910,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5043682244327105648, guid: 8323f15e47eec9946848bd352256d035, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5043682244327105648, guid: 8323f15e47eec9946848bd352256d035, type: 3}
       propertyPath: m_LocalRotation.z
@@ -145893,7 +145930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5671460109755072202, guid: 8323f15e47eec9946848bd352256d035, type: 3}
       propertyPath: m_Name
-      value: Magazine
+      value: Orange Soda
       objectReference: {fileID: 0}
     - target: {fileID: 5671460109755072202, guid: 8323f15e47eec9946848bd352256d035, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -192587,7 +192624,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 64}
+  m_AnchoredPosition: {x: 0, y: 17}
   m_SizeDelta: {x: 2000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1267299720
@@ -192637,8 +192674,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -210144,7 +210181,7 @@ Transform:
   - {fileID: 1976079831}
   - {fileID: 289615670}
   - {fileID: 1269613008}
-  - {fileID: 967553902}
+  - {fileID: 658859396}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1389806822
@@ -217379,6 +217416,7 @@ Transform:
   - {fileID: 818007078}
   - {fileID: 1256528360}
   - {fileID: 322079453}
+  - {fileID: 967553902}
   m_Father: {fileID: 2056952227}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &1434345906
@@ -236211,7 +236249,7 @@ RectTransform:
   m_GameObject: {fileID: 1567299245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 13, y: 13, z: 13}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 425141641}
@@ -236221,7 +236259,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -59}
+  m_AnchoredPosition: {x: 0, y: -27.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1567299247
@@ -270369,7 +270407,7 @@ MonoBehaviour:
     Value: 0
     Center: 0
     Range: {x: -90, y: 90}
-    Wrap: 1
+    Wrap: 0
     Recentering:
       Enabled: 0
       Wait: 1

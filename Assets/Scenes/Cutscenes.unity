@@ -126327,7 +126327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8450770710664823218, guid: 23bb758e88dd67145a081705d63d8624, type: 3}
       propertyPath: sensitivity
-      value: 140
+      value: 160
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5307153826588384982, guid: 23bb758e88dd67145a081705d63d8624, type: 3}
@@ -239007,9 +239007,9 @@ MonoBehaviour:
     Value: 0
     Center: 0
     Range: {x: -90, y: 90}
-    Wrap: 1
+    Wrap: 0
     Recentering:
-      Enabled: 0
+      Enabled: 1
       Wait: 1
       Time: 2
     Restrictions: 0

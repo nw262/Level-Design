@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 2538902241711575387}
   - component: {fileID: 1482851642446864126}
   - component: {fileID: 3706694488949172788}
-  - component: {fileID: 2643972926941181629}
+  - component: {fileID: 5254618743814980050}
   m_Layer: 0
   m_Name: Can of Cola
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2538902241711575387
 Transform:
@@ -87,8 +87,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2643972926941181629
-MeshCollider:
+--- !u!136 &5254618743814980050
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,7 +105,8 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7499862158262472704, guid: 03885f0d0f9690f40943061d1c76f293, type: 3}
+  serializedVersion: 2
+  m_Radius: 0.07767668
+  m_Height: 0.26075616
+  m_Direction: 1
+  m_Center: {x: -0.00000023841858, y: 0.13048743, z: -0.0000003091991}

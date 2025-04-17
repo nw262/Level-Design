@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 5043682244327105648}
   - component: {fileID: 8237393583490001877}
   - component: {fileID: 6176104817674428191}
-  - component: {fileID: 4788587793573118868}
+  - component: {fileID: 7661483207715272783}
   m_Layer: 0
   m_Name: Can of Orange
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5043682244327105648
 Transform:
@@ -87,8 +87,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4788587793573118868
-MeshCollider:
+--- !u!136 &7661483207715272783
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,7 +105,8 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6080087844375034624, guid: 64ca426e7f64356498e5fef4621c8eac, type: 3}
+  serializedVersion: 2
+  m_Radius: 0.07767668
+  m_Height: 0.26075616
+  m_Direction: 1
+  m_Center: {x: -0.00000023841858, y: 0.13048743, z: -0.00000033155084}

@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 8540632134969363068}
   - component: {fileID: 4695477843024250329}
   - component: {fileID: 7407655515406037267}
-  - component: {fileID: 8146117618086964628}
+  - component: {fileID: 7660564946204268100}
   m_Layer: 0
   m_Name: Small Cola Drink
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8540632134969363068
 Transform:
@@ -87,8 +87,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8146117618086964628
-MeshCollider:
+--- !u!136 &7660564946204268100
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,7 +105,8 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1535279233325096128, guid: d05658bb4641a8b46aee61633024d24e, type: 3}
+  serializedVersion: 2
+  m_Radius: 0.07488982
+  m_Height: 0.42781827
+  m_Direction: 1
+  m_Center: {x: -0.00000016763806, y: 0.21390913, z: 0.00000013411045}

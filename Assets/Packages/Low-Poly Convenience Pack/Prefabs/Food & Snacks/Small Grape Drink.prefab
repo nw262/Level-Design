@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 4509783588173605709}
   - component: {fileID: 664883283413591272}
   - component: {fileID: 3377370533814767650}
-  - component: {fileID: 4116080305767713955}
+  - component: {fileID: 6762661641272312220}
   m_Layer: 0
   m_Name: Small Grape Drink
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4509783588173605709
 Transform:
@@ -87,8 +87,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4116080305767713955
-MeshCollider:
+--- !u!136 &6762661641272312220
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,7 +105,8 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4860857241817011614, guid: 567994fc678fa9d449507f4b6cbc67c7, type: 3}
+  serializedVersion: 2
+  m_Radius: 0.08033939
+  m_Height: 0.42781827
+  m_Direction: 1
+  m_Center: {x: -0.00000017136335, y: 0.21390913, z: 0.00000012665987}

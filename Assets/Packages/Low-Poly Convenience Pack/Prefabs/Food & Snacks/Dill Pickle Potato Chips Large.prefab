@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 1083917365504464444}
   - component: {fileID: 4081671440398178713}
   - component: {fileID: 2252351516408720723}
-  - component: {fileID: 612595534594060752}
+  - component: {fileID: 6998639086770851734}
   m_Layer: 0
   m_Name: Dill Pickle Potato Chips Large
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1083917365504464444
 Transform:
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306536924686126214}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000021855694, y: -0.00000004371139, z: 1.0165751e-15, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -87,8 +87,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &612595534594060752
-MeshCollider:
+--- !u!65 &6998639086770851734
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,7 +105,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7439400804561298986, guid: 9bada877fc2a6434b907ad65c960b510, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.38311002, y: 0.55329055, z: 0.23570278}
+  m_Center: {x: -0.0072976947, y: 0.27623817, z: 0.0002044253}

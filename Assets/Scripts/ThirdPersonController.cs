@@ -41,10 +41,11 @@ public class ThirdPersonController : MonoBehaviour
     {   
         ToggleShoppingList();
 
-        float moveHorizontal = Input.GetAxis("Horizontal");
+        //float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        input = transform.right * moveHorizontal + transform.forward * moveVertical;
+        //input = transform.right * moveHorizontal + transform.forward * moveVertical;
+        input = transform.forward * moveVertical;
         input.Normalize();
 
         if (animator)
